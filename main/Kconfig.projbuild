@@ -1,0 +1,14 @@
+menu "Device Role Configuration"
+
+    choice DEVICE_ROLE
+        prompt "Select Device Role"
+        default DEVICE_ROLE_SENDER
+        help
+            Select whether this device acts as Sender or Receiver.
+
+        config DEVICE_ROLE_SENDER
+            bool "Sender"
+        config DEVICE_ROLE_RECEIVER
+            bool "Receiver"
+    endchoice
+endmenu
