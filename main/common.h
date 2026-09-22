@@ -4,5 +4,10 @@
 // 構造体の登録
 typedef struct {
     int sensor_id;
-    char message[32];
+    char message[64];
 } struct_t;
+
+typedef struct {
+    int status_code; // 0: OK, -1: サイズ不一致, 999: その他
+    char log_msg[64];
+}response_t;

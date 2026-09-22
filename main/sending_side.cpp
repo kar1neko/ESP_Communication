@@ -1,6 +1,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
+#include <string>
 #include "esp_err.h"
 #include "esp_event.h"
 #include "esp_netif.h"
@@ -60,6 +61,10 @@ static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) 
     }
 }
 
+static void on_err_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) {
+    ESP_LOGE("RECV_LOG", "%.*s", len, (const char* )data);
+}
+
 // main
 extern "C" void app_main() {
     init_NVS();
@@ -75,19 +80,24 @@ extern "C" void app_main() {
     peer_info.channel = 0; // channel
     peer_info.encrypt = false;
     ESP_ERROR_CHECK(esp_now_add_peer(&peer_info));
+    ESP_ERROR_CHECK(esp_now_register_recv_cb(on_err_recv));
 
     struct_t send_data = {};
     send_data.sensor_id = 101;
-    snprintf(send_data.message, sizeof(send_data.message), "pokkalemon");
+    int cnt = 0;
+    // std::string s = "natinal institute of technology asahikawa-collage";
     
     // loop
     while (1) {
+        snprintf(send_data.message, sizeof(send_data.message), "%d", cnt);
         esp_err_t result = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
         if (result == ESP_OK) {
             ESP_LOGI(LOG, "Send- ID: %d, message: %s", send_data.sensor_id, send_data.message);
         } else {
             ESP_LOGE(LOG, "semd err %s", esp_err_to_name(result));
         }
+        cnt = (cnt + 1) % 10;
+        
         vTaskDelay(pdMS_TO_TICKS(3000));
-}
     }
+}

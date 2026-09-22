@@ -1,6 +1,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
+#include <stdlib.h>
 #include "esp_err.h"
 #include "esp_event.h"
 #include "esp_netif.h"
@@ -18,11 +19,24 @@
 
 static const char *MAC_ADDRESS = "REC_MAC_ADDRESS";
 static const char *RECEIVE_CALLBACK = "REC_CB";
+static const char *RECV = "RECEVE_SIDE";
 
 // 関数定義
 void init_NVS();
 void init_wifi();
 void print_mac();
+
+// 送信側へログを送信
+void send_err_to_sender(const uint8_t *dest_mac, const char *err_msg) { // dest_macに送信側のmac_addressを格納
+    if (!esp_now_is_peer_exist(dest_mac)) { // 送信機がぴあ登録されていなければ登録する(基本初回のみ)
+        esp_now_peer_info peer_info = {};
+        memcpy(peer_info.peer_addr, dest_mac, ESP_NOW_ETH_ALEN);
+        peer_info.channel = 0;
+        peer_info.encrypt = false;
+        esp_now_add_peer(&peer_info);
+    }
+    esp_now_send(dest_mac, (const uint8_t*)err_msg, strlen(err_msg));
+}
 
 // receive cb
 static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) { // recv_info -> 送信元のMacAddress、RSSIなどが格納された構造体のポインタ
@@ -41,7 +55,7 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
     }
 
     // 受信サイズが構造体のサイズと一致しているかチェック
-    if (len == sizeof(struct_t) && result == ESP_OK) {
+    if (len == sizeof(struct_t)) {
         const struct_t *recv_data = (const struct_t *)data; // 生データを構造体の型にキャスト
 
         // アロー演算子でメンバ変数にアクセスして出力
@@ -49,6 +63,10 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
         ESP_LOGI(RECEIVE_CALLBACK, "message: %s", recv_data->message);
     } else {
         ESP_LOGE(RECEIVE_CALLBACK, "receive data are missmatch!");
+
+        char err_msg[64];
+        snprintf(err_msg, sizeof(err_msg), "[RX Err] Data size missmatch. len: %d bytes", len);
+        send_err_to_sender(recv_info->src_addr, err_msg); // 送信側(src_addr)にerr_msgを送信
     }
 }
 
@@ -60,13 +78,17 @@ void print_mac() {
 }
 
 // initialize NVS
+//FIXME: successとfailの関係がおかしい
 void init_NVS() {
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
+        ESP_LOGI(RECV, "initialize NVS Successfully!");
+    } else {
+        ESP_LOGE(RECV, "initialize NVS failed: %s", esp_err_to_name(ret));
+        // abort(); // 強制終了
     }
-    ESP_ERROR_CHECK(ret);
 }
 
 // initialize wifi
@@ -77,8 +99,10 @@ void init_wifi() {
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_LOGI(RECV, "Starting wifi...");
 }
 
+// main
 extern "C" void app_main() {
     init_NVS();
     init_wifi();
