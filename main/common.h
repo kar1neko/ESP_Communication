@@ -4,7 +4,7 @@
 // 構造体の登録
 typedef struct {
     int sensor_id;
-    char message[64];
+    char message[64]; // default: 32
 } struct_t;
 
 typedef struct {

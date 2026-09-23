@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <cstring>
 #include <string>
+#include "driver/gpio.h"
 #include "esp_err.h"
 #include "esp_event.h"
 #include "esp_netif.h"
@@ -12,6 +13,7 @@
 #include "esp_now.h"
 #include "freertos/idf_additions.h"
 #include "freertos/projdefs.h"
+#include "hal/gpio_types.h"
 #include "nvs.h"
 #include "nvs_flash.h"
 #include "esp_mac.h"

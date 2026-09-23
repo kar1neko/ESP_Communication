@@ -12,14 +12,20 @@
 #include "esp_now.h"
 #include "freertos/idf_additions.h"
 #include "freertos/projdefs.h"
+#include "hal/gpio_types.h"
 #include "nvs.h"
 #include "nvs_flash.h"
 #include "esp_mac.h"
+#include "driver/gpio.h"
+#include "freertos/task.h"
 #include "common.h"
+#include "soc/gpio_num.h"
 
 static const char *MAC_ADDRESS = "REC_MAC_ADDRESS";
 static const char *RECEIVE_CALLBACK = "REC_CB";
 static const char *RECV = "RECEVE_SIDE";
+
+#define CONTROL_PIN GPIO_NUM_4
 
 // 関数定義
 void init_NVS();
@@ -28,7 +34,7 @@ void print_mac();
 
 // 送信側へログを送信
 void send_err_to_sender(const uint8_t *dest_mac, const char *err_msg) { // dest_macに送信側のmac_addressを格納
-    if (!esp_now_is_peer_exist(dest_mac)) { // 送信機がぴあ登録されていなければ登録する(基本初回のみ)
+    if (!esp_now_is_peer_exist(dest_mac)) { // 送信機がピア登録されていなければ登録する(基本初回のみ)
         esp_now_peer_info peer_info = {};
         memcpy(peer_info.peer_addr, dest_mac, ESP_NOW_ETH_ALEN);
         peer_info.channel = 0;
@@ -64,6 +70,7 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
     } else {
         ESP_LOGE(RECEIVE_CALLBACK, "receive data are missmatch!");
 
+        // UCCのコーヒー不味すぎる
         char err_msg[64];
         snprintf(err_msg, sizeof(err_msg), "[RX Err] Data size missmatch. len: %d bytes", len);
         send_err_to_sender(recv_info->src_addr, err_msg); // 送信側(src_addr)にerr_msgを送信
@@ -112,8 +119,18 @@ extern "C" void app_main() {
     // CB登録
     ESP_ERROR_CHECK(esp_now_register_recv_cb(on_data_recv));
 
+    // GPIOピンの初期化
+    gpio_reset_pin(CONTROL_PIN);
+    gpio_set_direction(CONTROL_PIN, GPIO_MODE_OUTPUT);
+
+    // HIGH/LOWのセット
+    int level = 0;
+    
     // loop
     while (1) {
+        gpio_set_level(CONTROL_PIN, level);
+        level = !level;
+        
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
