@@ -19,15 +19,23 @@
 #include "esp_mac.h"
 #include "common.h"
 
+/*
+ * FIXME recv_logとsend_logが同じログ出してる
+ * E (13168) RECV_LOG: [info] GPIO_PIN_4 is HIGH
+ * I (13168) SEND_LOG: [info] GPIO_PIN_4 is HIGH
+ */
+
 static const char *MAC_ADDRESS = "SEND_MAC_ADDRESS";
 static const char *LOG = "SEND_LOG";
-static uint8_t receiver_mac[6] = {0x04, 0x83, 0x08, 0x0E, 0x53, 0x04}; // 受信側のMac Address
+static const char *r_LOG = "recv_LOG";
+static uint8_t receiver_mac[6] = {0x98, 0xA3, 0x16, 0x8F, 0xB6, 0x0C}; // 受信側のMac Address
 
 // 関数定義
 void init_NVS();
 void init_wifi();
 static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status);
 void print_macAddress();
+void on_log_recv();
 
 void print_macAddress() {
     uint8_t mac[6];
@@ -53,6 +61,7 @@ void init_wifi() {
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_ERROR_CHECK(esp_wifi_set_channel(1, WIFI_SECOND_CHAN_NONE)); // チャンネルを明示的に固定
 }
 
 static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) {
@@ -63,8 +72,13 @@ static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) 
     }
 }
 
-static void on_err_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) {
+static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) {
     ESP_LOGE("RECV_LOG", "%.*s", len, (const char* )data);
+    if (len >= 6 && memcmp(data, "[info]", 6) == 0) {
+        ESP_LOGI(LOG, "%.*s", len, (const char *)data);
+    } else if (len >= 6 && memcmp(data, "[Eror]", 6) == 0) {
+        ESP_LOGE(r_LOG, "%.*s", len, (const char *)data);
+    }
 }
 
 // main
@@ -79,10 +93,11 @@ extern "C" void app_main() {
     // 受信側のesp32を登録
     esp_now_peer_info_t peer_info = {};
     memcpy(peer_info.peer_addr, receiver_mac, ESP_NOW_ETH_ALEN);
-    peer_info.channel = 0; // channel
+    peer_info.channel = 1; // channel
     peer_info.encrypt = false;
+    peer_info.ifidx = WIFI_IF_STA;
     ESP_ERROR_CHECK(esp_now_add_peer(&peer_info));
-    ESP_ERROR_CHECK(esp_now_register_recv_cb(on_err_recv));
+    ESP_ERROR_CHECK(esp_now_register_recv_cb(on_log_recv));
 
     struct_t send_data = {};
     send_data.sensor_id = 101;
