@@ -23,10 +23,12 @@
 #include "common.h"
 #include "soc/gpio_num.h"
 #include "cstdarg"
+#include "esp_timer.h"
 
 static const char *MAC_ADDRESS = "REC_MAC_ADDRESS";
 static const char *RECEIVE_CALLBACK = "REC_CB";
 static const char *RECV = "RECEVE_SIDE";
+static const char *STATUS = "RECV_STATE";
 
 #define CONTROL_PIN GPIO_NUM_4
 
@@ -35,6 +37,13 @@ void init_NVS();
 void init_wifi();
 void print_mac();
 void send_log_to_sender();
+uint64_t get_millis();
+
+inline uint64_t get_millis() {
+    return esp_timer_get_time() / 1000;
+}
+
+int64_t prev_time = 0;
 
 // 送信側へログを送信
 // ... は可変長の引数
@@ -53,18 +62,19 @@ void send_log_to_sender(const uint8_t *dest_mac, const char* format, ...) { // d
     va_start(args, format); // formatから後に続く引数をargsに取り込む
     vsnprintf(buffer, sizeof(buffer), format, args); // bufferに文字列を書き込む
     va_end(args); // 引数リストの処理を終了する
-
     esp_now_send(dest_mac, (const uint8_t*)buffer, strlen(buffer)); // 送信
     
 }
 
-/*
+/* 
+ * -------------------------------------------------------
  * esp_now_recv_info_t
  * ・src_addr: 送信元のMAC-Address(uint8_t *)
  * ・des_addr: 宛先のMAC-Address(uint8_t *)
  * ・rx_ctrl: 受信時のWi-Fi制御情報(wifi_pkt_rx_ctrl_t *)
  *  -> rssiや使用channelが格納
- */
+ * -------------------------------------------------------
+ */ 
 
 static uint8_t sender_mac[6]; // 送信先のMac-Addressを保存
 static bool Is_mac_saved = false;
@@ -87,6 +97,11 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
 
     memcpy(sender_mac, recv_info->src_addr, 6); // sender_macにsrc_addrを保存
     Is_mac_saved = true;
+
+    // HB受信判定
+    if (len >= 4 && memcmp(data, "[hb]", 4) == 0) {
+        prev_time = get_millis();
+    }
 
     // 受信サイズが構造体のサイズと一致しているかチェック
     if (len == sizeof(struct_t)) {
@@ -159,36 +174,64 @@ extern "C" void app_main() {
     // const struct_t *recv_data = reinterpret_cast<const struct_t*>(data); // キャスト
     // esp_now_recv_info *recv_data;
     int level = 1; // HIGH/LOWの定義
+
+    typedef enum {
+        STATE_SYNC,
+        STATE_NORMAL,
+        STATE_ERR
+    } state_t;
+
+    state_t cur_state = STATE_SYNC;
     
     // loop
     while (1) {
-        //TODO まず接続確立のためにテストテキストの送信をさせたい
-        gpio_set_level(CONTROL_PIN, level);
-        level = !level;
-        if (level == 1) {
-            ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
-            if (Is_mac_saved) {
-            send_log_to_sender(sender_mac, "[info] GPIO_PIN_4 is HIGH");
-            } else {
-                ESP_LOGE(RECV, "failed to get sender mac");
-                ESP_LOGE(RECV, "sender_mac: MAC: %02X:%02X:%02X:%02X:%02X:%02X",
-                    sender_mac[0],
-                    sender_mac[1],
-                    sender_mac[2],
-                    sender_mac[3],
-                    sender_mac[4],
-                    sender_mac[5]
-                );
+        switch (cur_state) {
+            case STATE_SYNC: {
+                ESP_LOGI(STATUS, "STATE_CYNC");
+                if(Is_mac_saved) {
+                    ESP_LOGI(STATUS, "sync successfully");
+                    cur_state = STATE_NORMAL; // NORMALへ遷移
+                } else {
+                    ESP_LOGE(STATUS, "sync unsuccessful");
+                    ESP_LOGE(STATUS, "sender_mac: MAC: %02X:%02X:%02X:%02X:%02X:%02X",
+                        sender_mac[0],
+                        sender_mac[1],
+                        sender_mac[2],
+                        sender_mac[3],
+                        sender_mac[4],
+                        sender_mac[5]
+                    );
+                }
+                break;
             }
-        } else {
-            ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
-            if (Is_mac_saved) {
-                send_log_to_sender(sender_mac, "[info] GPIO_PIN_4 is LOW");
-            } else {
-                ESP_LOGE(RECV, "failed to get sender mac");
-
+    
+            case STATE_NORMAL: {
+                ESP_LOGI(STATUS, "STATE_NORMAL");
+                gpio_set_level(CONTROL_PIN, level);
+                if (get_millis() - prev_time >= 1500) {
+                    ESP_LOGE(RECV, "fail to receive HB.");
+                    cur_state = STATE_ERR; // ERRへ遷移
+                } else {
+                    if  (level == 1) {
+                        ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
+                        send_log_to_sender(sender_mac, "[info] GPIO_PIN_4 is HIGH");
+                    } else {
+                        ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
+                        send_log_to_sender(sender_mac, "[info] GPIO_PIN_4 is LOW");
+                    }
+                    level = !level;
+                    
+                }
+                break;
+            }
+    
+            case STATE_ERR: {
+                gpio_set_level(CONTROL_PIN, 0);
+                ESP_LOGE(STATUS, "error: connection lost");
+                break;
             }
         }
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }

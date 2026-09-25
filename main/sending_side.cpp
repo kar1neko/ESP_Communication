@@ -1,6 +1,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
+#include <stdlib.h>
 #include <string>
 #include "driver/gpio.h"
 #include "esp_err.h"
@@ -18,17 +19,17 @@
 #include "nvs_flash.h"
 #include "esp_mac.h"
 #include "common.h"
-
-/*
- * FIXME recv_logとsend_logが同じログ出してる
- * E (13168) RECV_LOG: [info] GPIO_PIN_4 is HIGH
- * I (13168) SEND_LOG: [info] GPIO_PIN_4 is HIGH
- */
+#include "soc/gpio_num.h"
+#include "esp_timer.h"
+#include "esp_rom_sys.h"
 
 static const char *MAC_ADDRESS = "SEND_MAC_ADDRESS";
 static const char *LOG = "SEND_LOG";
 static const char *r_LOG = "recv_LOG";
 static uint8_t receiver_mac[6] = {0x98, 0xA3, 0x16, 0x8F, 0xB6, 0x0C}; // 受信側のMac Address
+
+
+#define CONTROL_PIN GPIO_NUM_4
 
 // 関数定義
 void init_NVS();
@@ -36,6 +37,11 @@ void init_wifi();
 static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status);
 void print_macAddress();
 void on_log_recv();
+uint64_t get_millis();
+
+inline uint64_t get_millis() {
+    return esp_timer_get_time() / 1000;
+}
 
 void print_macAddress() {
     uint8_t mac[6];
@@ -73,14 +79,17 @@ static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) 
 }
 
 static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) {
-    ESP_LOGE("RECV_LOG", "%.*s", len, (const char* )data);
     if (len >= 6 && memcmp(data, "[info]", 6) == 0) {
-        ESP_LOGI(LOG, "%.*s", len, (const char *)data);
+        ESP_LOGI(r_LOG, "%.*s", len, (const char *)data);
+        // ESP_LOGI(LOG, "through point1!");
     } else if (len >= 6 && memcmp(data, "[Eror]", 6) == 0) {
         ESP_LOGE(r_LOG, "%.*s", len, (const char *)data);
+        // ESP_LOGI(LOG, "through point2!");
     }
 }
 
+// TODO levelのHIGH/LOW指示 sedner -> reciver
+// TODO heatbeatのログ型を固定
 // main
 extern "C" void app_main() {
     init_NVS();
@@ -102,7 +111,48 @@ extern "C" void app_main() {
     struct_t send_data = {};
     send_data.sensor_id = 101;
     int cnt = 0;
+    int level = 0;
     // std::string s = "natinal institute of technology asahikawa-collage";
+    uint64_t prev_time = 0;
+    
+    //TODO level指示をsender側から行う
+    typedef enum {
+        STATE_SYNC,
+        STATE_NORMAL,
+        STATE_ERR
+    } state_t;
+
+    state_t cur_state = STATE_SYNC;
+
+    switch (cur_state) {
+        case STATE_SYNC: {
+            ESP_LOGI(LOG, "sync timer");
+            prev_time = get_millis();
+            cur_state = STATE_NORMAL; // normalに遷移
+            break;
+        }
+
+        case STATE_NORMAL: {
+            ESP_LOGI(LOG, "status: normal");
+            if (get_millis() - prev_time >= 300) { // 現在値がprev_timeから300ms経過した時
+                snprintf(send_data.message, sizeof(send_data.message), "[hb]");
+                esp_err_t res = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
+
+                if (res != ESP_OK) {
+                    ESP_LOGE(r_LOG, "send fail: %d", res);
+                }
+            prev_time = get_millis();
+            }
+            break;
+        }
+
+        // FIXME この状態ではsender側はerrに遷移しない
+        case STATE_ERR: {
+            ESP_LOGE(LOG, "error occurred!");
+            
+            break;
+        }
+    }
     
     // loop
     while (1) {
@@ -115,6 +165,6 @@ extern "C" void app_main() {
         }
         cnt = (cnt + 1) % 10;
         
-        vTaskDelay(pdMS_TO_TICKS(3000));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
