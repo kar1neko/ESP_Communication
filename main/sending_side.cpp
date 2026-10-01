@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
@@ -78,18 +79,29 @@ static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) 
     }
 }
 
+static bool recv_hbcb = false;
+static portMUX_TYPE recv_hbcb_lock = portMUX_INITIALIZER_UNLOCKED;
+
 static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) {
+    if (recv_info == nullptr || recv_info->src_addr == nullptr ||
+        len < 0 || (len > 0 && data == nullptr)) {
+        ESP_LOGE(r_LOG, "invalid ESP-NOW receive arguments");
+        return;
+    }
     if (len >= 6 && memcmp(data, "[info]", 6) == 0) {
         ESP_LOGI(r_LOG, "%.*s", len, (const char *)data);
         // ESP_LOGI(LOG, "through point1!");
     } else if (len >= 6 && memcmp(data, "[Eror]", 6) == 0) {
         ESP_LOGE(r_LOG, "%.*s", len, (const char *)data);
         // ESP_LOGI(LOG, "through point2!");
+    } else if (len >= 8 && memcmp(data, "[hb][cb]", 8) == 0) {
+        portENTER_CRITICAL(&recv_hbcb_lock);
+        recv_hbcb = true;
+        portEXIT_CRITICAL(&recv_hbcb_lock);
     }
 }
 
 // TODO levelのHIGH/LOW指示 sedner -> reciver
-// TODO heatbeatのログ型を固定
 // main
 extern "C" void app_main() {
     init_NVS();
@@ -110,11 +122,10 @@ extern "C" void app_main() {
 
     struct_t send_data = {};
     send_data.sensor_id = 101;
-    int cnt = 0;
     int level = 0;
     // std::string s = "natinal institute of technology asahikawa-collage";
-    uint64_t prev_time = 0;
-    
+    uint32_t success_prev_time = 0, sent_hb_time = 0;
+
     //TODO level指示をsender側から行う
     typedef enum {
         STATE_SYNC,
@@ -124,47 +135,66 @@ extern "C" void app_main() {
 
     state_t cur_state = STATE_SYNC;
 
-    switch (cur_state) {
-        case STATE_SYNC: {
-            ESP_LOGI(LOG, "sync timer");
-            prev_time = get_millis();
-            cur_state = STATE_NORMAL; // normalに遷移
-            break;
-        }
-
-        case STATE_NORMAL: {
-            ESP_LOGI(LOG, "status: normal");
-            if (get_millis() - prev_time >= 300) { // 現在値がprev_timeから300ms経過した時
-                snprintf(send_data.message, sizeof(send_data.message), "[hb]");
-                esp_err_t res = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
-
-                if (res != ESP_OK) {
-                    ESP_LOGE(r_LOG, "send fail: %d", res);
-                }
-            prev_time = get_millis();
-            }
-            break;
-        }
-
-        // FIXME この状態ではsender側はerrに遷移しない
-        case STATE_ERR: {
-            ESP_LOGE(LOG, "error occurred!");
-            
-            break;
-        }
-    }
-    
     // loop
     while (1) {
-        snprintf(send_data.message, sizeof(send_data.message), "%d", cnt);
-        esp_err_t result = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
-        if (result == ESP_OK) {
-            ESP_LOGI(LOG, "Send- ID: %d, message: %s", send_data.sensor_id, send_data.message);
-        } else {
-            ESP_LOGE(LOG, "semd err %s", esp_err_to_name(result));
+
+        switch (cur_state) {
+            //FIXME 遷移条件確認
+            case STATE_SYNC: {
+                ESP_LOGI(LOG, "sync timer");
+                sent_hb_time = get_millis();
+                success_prev_time = get_millis();
+                cur_state = STATE_NORMAL; // normalに遷移
+                break;
+            }
+
+            //TODO err遷移とsenderからrecieverのHIGH/LOwを組む
+            case STATE_NORMAL: {
+                ESP_LOGI(LOG, "status: normal");
+                if (get_millis() - sent_hb_time >= 300) { // 現在値がprev_timeから300ms経過した時
+                    snprintf(send_data.message, sizeof(send_data.message), "[hb]");
+                    esp_err_t res = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
+
+                    if (res != ESP_OK) {
+                        ESP_LOGE(r_LOG, "send fail: %d", res);
+                    }
+                sent_hb_time = get_millis();
+                }
+
+                bool heartbeat_confirmed;
+                portENTER_CRITICAL(&recv_hbcb_lock);
+                heartbeat_confirmed = recv_hbcb;
+                recv_hbcb = false;
+                portEXIT_CRITICAL(&recv_hbcb_lock);
+                if (heartbeat_confirmed) {
+                    success_prev_time = get_millis();
+                }
+
+                if (get_millis() - success_prev_time >= 1500) {
+                    ESP_LOGE("STATE_LOG", "error! disconnected recv");
+                    cur_state = STATE_ERR;
+                }
+
+                break;
+            }
+
+            // FIXME この状態ではsender側はerrに遷移しない
+            case STATE_ERR: {
+                ESP_LOGE(LOG, "error occurred!");
+
+                break;
+            }
         }
-        cnt = (cnt + 1) % 10;
-        
+
+        // snprintf(send_data.message, sizeof(send_data.message), "%d", cnt);
+        // esp_err_t result = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
+        // if (result == ESP_OK) {
+        //     ESP_LOGI(LOG, "Send- ID: %d, message: %s", send_data.sensor_id, send_data.message);
+        // } else {
+        //     ESP_LOGE(LOG, "semd err %s", esp_err_to_name(result));
+        // }
+        // cnt = (cnt + 1) % 10;
+
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
