@@ -33,7 +33,7 @@
 static const char *MAC_ADDRESS = "SEND_MAC_ADDRESS";
 static const char *LOG = "SEND_LOG";
 static const char *r_LOG = "recv_LOG";
-static uint8_t receiver_mac[6] = {0x8C, 0x94, 0xDF, 0xAA, 0x38, 0x5C}; // 受信側のMac Address
+static uint8_t receiver_mac[6] = {0x04, 0x83, 0x08, 0x0E, 0x53, 0x04}; // 受信側のMac Address
 
 
 #define CONTROL_PIN GPIO_NUM_4
@@ -93,6 +93,11 @@ static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *dat
         ESP_LOGE(r_LOG, "invalid ESP-NOW receive arguments");
         return;
     }
+    // receiver以外からのパケットは無視する
+    if (memcmp(recv_info->src_addr, receiver_mac, ESP_NOW_ETH_ALEN) != 0) {
+        ESP_LOGW(r_LOG, "ignoring packet from unexpected sender " MACSTR, MAC2STR(recv_info->src_addr));
+        return;
+    }
     if (len >= 6 && memcmp(data, "[info]", 6) == 0) {
         ESP_LOGI(r_LOG, "%.*s", len, (const char *)data);
         // ESP_LOGI(LOG, "through point1!");
@@ -104,6 +109,27 @@ static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *dat
         recv_hbcb = true;
         portEXIT_CRITICAL(&recv_hbcb_lock);
     }
+}
+
+// [hb]を送信する。成功したらtrue
+static bool send_hb(struct_t *data) {
+    snprintf(data->message, sizeof(data->message), "[hb]");
+    esp_err_t res = esp_now_send(receiver_mac, (const uint8_t *)data, sizeof(*data));
+    if (res != ESP_OK) {
+        ESP_LOGE(r_LOG, "send fail: %d", res);
+        return false;
+    }
+    return true;
+}
+
+// [hb][cb]受信フラグを取得してクリアする(受信していればtrue)
+static bool take_hbcb() {
+    bool value;
+    portENTER_CRITICAL(&recv_hbcb_lock);
+    value = recv_hbcb;
+    recv_hbcb = false;
+    portEXIT_CRITICAL(&recv_hbcb_lock);
+    return value;
 }
 
 // TODO levelのHIGH/LOW指示 sedner -> reciver
@@ -147,9 +173,17 @@ extern "C" void app_main() {
             //FIXME 遷移条件確認
             case STATE_SYNC: {
                 ESP_LOGI(LOG, "sync timer");
-                sent_hb_time = get_millis();
-                success_prev_time = get_millis();
-                cur_state = STATE_NORMAL; // normalに遷移
+                // receiverから最初の[hb][cb]が返ってくるまで、300msごとに[hb]を送り続ける
+                if (get_millis() - sent_hb_time >= 300) {
+                    if (send_hb(&send_data)) {
+                        sent_hb_time = get_millis();
+                    }
+                }
+                if (take_hbcb()) {
+                    ESP_LOGI(LOG, "sync successfully");
+                    success_prev_time = get_millis();
+                    cur_state = STATE_NORMAL; // normalに遷移
+                }
                 break;
             }
 
@@ -157,22 +191,12 @@ extern "C" void app_main() {
             case STATE_NORMAL: {
                 ESP_LOGI(LOG, "status: normal");
                 if (get_millis() - sent_hb_time >= 300) { // 現在値がprev_timeから300ms経過した時
-                    snprintf(send_data.message, sizeof(send_data.message), "[hb]");
-                    esp_err_t res = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));
-
-                    if (res != ESP_OK) {
-                        ESP_LOGE(r_LOG, "send fail: %d", res);
-                    } else {
+                    if (send_hb(&send_data)) {
                         sent_hb_time = get_millis();
                     }
                 }
 
-                bool heartbeat_confirmed;
-                portENTER_CRITICAL(&recv_hbcb_lock);
-                heartbeat_confirmed = recv_hbcb;
-                recv_hbcb = false;
-                portEXIT_CRITICAL(&recv_hbcb_lock);
-                if (heartbeat_confirmed) {
+                if (take_hbcb()) {
                     success_prev_time = get_millis();
                 }
 
