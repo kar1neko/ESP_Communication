@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <cstring>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include "esp_err.h"
 #include "esp_event.h"
@@ -40,10 +41,13 @@ inline uint32_t get_millis() {
 
 static uint32_t hb_recv_prev_time = 0;
 static portMUX_TYPE prev_time_lock = portMUX_INITIALIZER_UNLOCKED; // timelockの定義
-static uint8_t sender_mac[ESP_NOW_ETH_ALEN] = {};
-static bool is_mac_saved = false;
-static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED; // maclockの定義
+// static uint8_t sender_mac[ESP_NOW_ETH_ALEN] = {};
+// static bool is_mac_saved = false;
+// static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED; // maclockの定義
 static QueueHandle_t log_queue = nullptr; // ログ用のキューを初期化
+static const uint8_t mac_compare[ESP_NOW_ETH_ALEN] = {
+  0x04, 0x83, 0x08, 0x0E, 0x53, 0x04
+};
 
 // 送信先とログの型指定
 struct pending_log_t {
@@ -51,24 +55,18 @@ struct pending_log_t {
     char message[128];
 };
 
-static bool get_sender_mac(uint8_t *mac) {
-    bool saved;
-    portENTER_CRITICAL(&sender_mac_lock);
-    saved = is_mac_saved;
-    if (saved) {
-        memcpy(mac, sender_mac, ESP_NOW_ETH_ALEN); // mac[6]に送信先のmacをコピーして保存
+
+static bool copy_sender_mac(uint8_t *mac) {
+    if (mac == nullptr) {
+        return false;
     }
-    portEXIT_CRITICAL(&sender_mac_lock);
-    return saved;
+    memcpy(mac, mac_compare, ESP_NOW_ETH_ALEN);
+    return true;
+    
 }
 
-static bool is_saved_sender(const uint8_t *mac) {
-    bool matches;
-    portENTER_CRITICAL(&sender_mac_lock);
-    matches = is_mac_saved &&
-        memcmp(sender_mac, mac, ESP_NOW_ETH_ALEN) == 0; // sender_macとmacをESP_NOW_ETH_ALEN(6 byte)だけ比較する
-    portEXIT_CRITICAL(&sender_mac_lock);
-    return matches;
+static bool is_match_sender(const uint8_t *mac) {
+    return mac != nullptr && memcmp(mac_compare, mac, ESP_NOW_ETH_ALEN) == 0;
 }
 
 // prev_timeのアップデート
@@ -136,22 +134,14 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
 
     // 受信サイズが構造体のサイズと一致しているかチェック
     if (len == sizeof(struct_t)) {
-        portENTER_CRITICAL(&sender_mac_lock);
-        if (!is_mac_saved) {
-            memcpy(sender_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN);
-            is_mac_saved = true;
-        }
-        bool accepted_sender =
-            memcmp(sender_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN) == 0;
-        portEXIT_CRITICAL(&sender_mac_lock);
-
         // src_addrとESP_NOW_ETH_ALENが一致しないので正常にメッセージが送れない可能性がある
-        if (!accepted_sender) {
-            ESP_LOGW(RECEIVE_CALLBACK, "ignoring packet from unexpected sender");
+        if (memcmp(mac_compare, recv_info->src_addr, ESP_NOW_ETH_ALEN) != 0) {
+            ESP_LOGW(RECEIVE_CALLBACK, "ignoring packet feom unexpected sender");
             return;
         }
+        
         struct_t recv_data;
-        // memcpy(&recv_data, data, sizeof(recv_data));
+        memcpy(&recv_data, data, sizeof(recv_data));
 
         size_t message_len = strnlen(recv_data.message, sizeof(recv_data.message));
 
@@ -163,8 +153,8 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
     } else {
         ESP_LOGE(RECEIVE_CALLBACK, "receive data are missmatch");
 
-        // is_saved_senderとlog_queueがnullptrでなければtrue
-        if (is_saved_sender(recv_info->src_addr) && log_queue != nullptr) {
+        // is_match_senderとlog_queueがnullptrでなければtrue
+        if (is_match_sender(recv_info->src_addr) && log_queue != nullptr) {
             pending_log_t pending = {};
             memcpy(pending.dest_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN);
             snprintf(pending.message, sizeof(pending.message),
@@ -214,6 +204,7 @@ extern "C" void app_main() {
     init_wifi();
     print_mac();
     ESP_ERROR_CHECK(esp_now_init()); // initialize esp-now
+    
     log_queue = xQueueCreate(4, sizeof(pending_log_t));
     ESP_ERROR_CHECK(log_queue == nullptr ? ESP_ERR_NO_MEM : ESP_OK);
 
@@ -243,7 +234,7 @@ extern "C" void app_main() {
             case STATE_SYNC: {
                 ESP_LOGI(STATUS, "STATE_CYNC");
                 uint8_t current_sender_mac[ESP_NOW_ETH_ALEN];
-                if(get_sender_mac(current_sender_mac)) {
+                if(copy_sender_mac(current_sender_mac)) {
                     ESP_LOGI(STATUS, "sync successfully");
                     update_prev_time();
                     cur_state = STATE_NORMAL; // NORMALへ遷移
@@ -262,7 +253,7 @@ extern "C" void app_main() {
                     cur_state = STATE_ERR; // ERRへ遷移
                 } else {
                     uint8_t current_sender_mac[ESP_NOW_ETH_ALEN];
-                    if (!get_sender_mac(current_sender_mac)) {
+                    if (!copy_sender_mac(current_sender_mac)) {
                         ESP_LOGE(RECV, "sender MAC is unavailable");
                         break;
                     }
@@ -270,13 +261,13 @@ extern "C" void app_main() {
                     while (xQueueReceive(log_queue, &pending, 0) == pdPASS) {
                         send_log_to_sender(pending.dest_mac, "%s", pending.message);
                     }
-                    send_log_to_sender(current_sender_mac, "[hb][cb]");
+                    send_log_to_sender(mac_compare, "[hb][cb]");
                     if  (level == 1) {
                         ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
-                        send_log_to_sender(current_sender_mac, "[info] GPIO_PIN_4 is HIGH");
+                        send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is HIGH");
                     } else {
                         ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
-                        send_log_to_sender(current_sender_mac, "[info] GPIO_PIN_4 is LOW");
+                        send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is LOW");
                     }
                     level = !level; // debug
 

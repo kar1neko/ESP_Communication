@@ -33,7 +33,7 @@
 static const char *MAC_ADDRESS = "SEND_MAC_ADDRESS";
 static const char *LOG = "SEND_LOG";
 static const char *r_LOG = "recv_LOG";
-static uint8_t receiver_mac[6] = {0x98, 0xA3, 0x16, 0x8F, 0xB6, 0x0C}; // 受信側のMac Address
+static uint8_t receiver_mac[6] = {0x8C, 0x94, 0xDF, 0xAA, 0x38, 0x5C}; // 受信側のMac Address
 
 
 #define CONTROL_PIN GPIO_NUM_4
