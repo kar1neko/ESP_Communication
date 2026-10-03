@@ -34,22 +34,18 @@ static const char *STATUS = "RECV_STATE";
 
 #define CONTROL_PIN GPIO_NUM_4
 
-// 関数定義
-void init_NVS();
-void init_wifi();
-void print_mac();
-void send_log_to_sender(const uint8_t *dest_mac, const char* format, ...);
-
-inline uint64_t get_millis() {
+inline uint32_t get_millis() {
     return esp_timer_get_time() / 1000;
 }
 
-static volatile int32_t prev_time = 0;
+static uint32_t hb_recv_prev_time = 0;
+static portMUX_TYPE prev_time_lock = portMUX_INITIALIZER_UNLOCKED; // timelockの定義
 static uint8_t sender_mac[ESP_NOW_ETH_ALEN] = {};
 static bool is_mac_saved = false;
-static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED;
-static QueueHandle_t log_queue = nullptr;
+static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED; // maclockの定義
+static QueueHandle_t log_queue = nullptr; // ログ用のキューを初期化
 
+// 送信先とログの型指定
 struct pending_log_t {
     uint8_t dest_mac[ESP_NOW_ETH_ALEN];
     char message[128];
@@ -60,7 +56,7 @@ static bool get_sender_mac(uint8_t *mac) {
     portENTER_CRITICAL(&sender_mac_lock);
     saved = is_mac_saved;
     if (saved) {
-        memcpy(mac, sender_mac, ESP_NOW_ETH_ALEN);
+        memcpy(mac, sender_mac, ESP_NOW_ETH_ALEN); // mac[6]に送信先のmacをコピーして保存
     }
     portEXIT_CRITICAL(&sender_mac_lock);
     return saved;
@@ -70,9 +66,25 @@ static bool is_saved_sender(const uint8_t *mac) {
     bool matches;
     portENTER_CRITICAL(&sender_mac_lock);
     matches = is_mac_saved &&
-        memcmp(sender_mac, mac, ESP_NOW_ETH_ALEN) == 0;
+        memcmp(sender_mac, mac, ESP_NOW_ETH_ALEN) == 0; // sender_macとmacをESP_NOW_ETH_ALEN(6 byte)だけ比較する
     portEXIT_CRITICAL(&sender_mac_lock);
     return matches;
+}
+
+// prev_timeのアップデート
+static void update_prev_time() {
+    portENTER_CRITICAL(&prev_time_lock);
+    hb_recv_prev_time = get_millis();
+    portEXIT_CRITICAL(&prev_time_lock);
+}
+
+// prev_timeの取得
+static uint64_t get_prev_time() {
+    uint64_t value;
+    portENTER_CRITICAL(&prev_time_lock);
+    value = hb_recv_prev_time;
+    portEXIT_CRITICAL(&prev_time_lock);
+    return value;
 }
 
 // 送信側へログを送信
@@ -122,20 +134,6 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
         return;
     }
 
-    if (recv_info->rx_ctrl != nullptr) {
-        int rssi = recv_info->rx_ctrl->rssi;
-        ESP_LOGI(RECEIVE_CALLBACK, "Received!: %d bytes(RSSI: %d dBm) from MAC: %02X:%02X:%02X:%02X:%02X:%02X",
-            len,
-            rssi,
-            recv_info->src_addr[0],
-            recv_info->src_addr[1],
-            recv_info->src_addr[2],
-            recv_info->src_addr[3],
-            recv_info->src_addr[4],
-            recv_info->src_addr[5] // 送信元のMacAddressを格納
-        );
-    }
-
     // 受信サイズが構造体のサイズと一致しているかチェック
     if (len == sizeof(struct_t)) {
         portENTER_CRITICAL(&sender_mac_lock);
@@ -146,30 +144,26 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
         bool accepted_sender =
             memcmp(sender_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN) == 0;
         portEXIT_CRITICAL(&sender_mac_lock);
+
+        // src_addrとESP_NOW_ETH_ALENが一致しないので正常にメッセージが送れない可能性がある
         if (!accepted_sender) {
             ESP_LOGW(RECEIVE_CALLBACK, "ignoring packet from unexpected sender");
             return;
         }
-        ESP_LOGI(RECEIVE_CALLBACK, "saved sender MAC: " MACSTR,
-            MAC2STR(recv_info->src_addr));
+        struct_t recv_data;
+        // memcpy(&recv_data, data, sizeof(recv_data));
 
-        // 生データを構造体の型にキャスト
-        const struct_t *recv_data = reinterpret_cast<const struct_t* >(data);
-
-        // アロー演算子でメンバ変数にアクセスして出力
-        ESP_LOGI(RECEIVE_CALLBACK, "Sensor ID: %d", recv_data->sensor_id);
-        size_t message_len = strnlen(recv_data->message, sizeof(recv_data->message));
-        ESP_LOGI(RECEIVE_CALLBACK, "message: %.*s",
-            static_cast<int>(message_len), recv_data->message);
+        size_t message_len = strnlen(recv_data.message, sizeof(recv_data.message));
 
         // HB受信判定
-        if (memcmp(data + offsetof(struct_t, message), "[hb]", 4) == 0) {
-            prev_time = get_millis();
+        if (message_len >= 4 && memcmp(recv_data.message, "[hb]", 4) == 0) {
+            update_prev_time();
         }
 
     } else {
-        ESP_LOGE(RECEIVE_CALLBACK, "receive data are missmatch!");
+        ESP_LOGE(RECEIVE_CALLBACK, "receive data are missmatch");
 
+        // is_saved_senderとlog_queueがnullptrでなければtrue
         if (is_saved_sender(recv_info->src_addr) && log_queue != nullptr) {
             pending_log_t pending = {};
             memcpy(pending.dest_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN);
@@ -199,10 +193,7 @@ void init_NVS() {
     if (ret == ESP_OK){
         ESP_LOGI(RECV, "initialize NVS Successfully!");
     }
-    else {
-        ESP_LOGE(RECV, "initialize NVS failed: %s", esp_err_to_name(ret));
-        // abort(); // 強制終了
-    }
+    ESP_ERROR_CHECK(ret);
 }
 
 // initialize wifi
@@ -254,6 +245,7 @@ extern "C" void app_main() {
                 uint8_t current_sender_mac[ESP_NOW_ETH_ALEN];
                 if(get_sender_mac(current_sender_mac)) {
                     ESP_LOGI(STATUS, "sync successfully");
+                    update_prev_time();
                     cur_state = STATE_NORMAL; // NORMALへ遷移
                 } else {
                     ESP_LOGE(STATUS, "sync unsuccessful");
@@ -264,8 +256,8 @@ extern "C" void app_main() {
 
             case STATE_NORMAL: {
                 ESP_LOGI(STATUS, "STATE_NORMAL");
-                gpio_set_level(CONTROL_PIN, level);
-                if (get_millis() - prev_time >= 1500) {
+                gpio_set_level(CONTROL_PIN, 0);
+                if (get_millis() - get_prev_time() >= 1500) {
                     ESP_LOGE(RECV, "fail to receive HB.");
                     cur_state = STATE_ERR; // ERRへ遷移
                 } else {

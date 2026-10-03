@@ -24,6 +24,12 @@
 #include "esp_timer.h"
 #include "esp_rom_sys.h"
 
+/*TODO debug向けに作成
+ * recv側のログを送信側に転送
+ * rssiの値、recv, sendした番号をsenderに送信
+ *
+ */
+
 static const char *MAC_ADDRESS = "SEND_MAC_ADDRESS";
 static const char *LOG = "SEND_LOG";
 static const char *r_LOG = "recv_LOG";
@@ -32,15 +38,15 @@ static uint8_t receiver_mac[6] = {0x98, 0xA3, 0x16, 0x8F, 0xB6, 0x0C}; // 受信
 
 #define CONTROL_PIN GPIO_NUM_4
 
-// 関数定義
-void init_NVS();
-void init_wifi();
-static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status);
-void print_macAddress();
-void on_log_recv();
-uint64_t get_millis();
+// // 関数定義
+// void init_NVS();
+// void init_wifi();
+// static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status);
+// void print_macAddress();
+// void on_log_recv();
+// uint32_t get_millis();
 
-inline uint64_t get_millis() {
+inline uint32_t get_millis() {
     return esp_timer_get_time() / 1000;
 }
 
@@ -83,8 +89,7 @@ static bool recv_hbcb = false;
 static portMUX_TYPE recv_hbcb_lock = portMUX_INITIALIZER_UNLOCKED;
 
 static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) {
-    if (recv_info == nullptr || recv_info->src_addr == nullptr ||
-        len < 0 || (len > 0 && data == nullptr)) {
+    if (recv_info == nullptr || recv_info->src_addr == nullptr || len < 0 || (len > 0 && data == nullptr)) {
         ESP_LOGE(r_LOG, "invalid ESP-NOW receive arguments");
         return;
     }
@@ -157,8 +162,9 @@ extern "C" void app_main() {
 
                     if (res != ESP_OK) {
                         ESP_LOGE(r_LOG, "send fail: %d", res);
+                    } else {
+                        sent_hb_time = get_millis();
                     }
-                sent_hb_time = get_millis();
                 }
 
                 bool heartbeat_confirmed;
