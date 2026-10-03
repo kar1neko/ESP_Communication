@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <cstring>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include "esp_err.h"
 #include "esp_event.h"
@@ -39,11 +40,16 @@ inline uint32_t get_millis() {
 }
 
 static uint32_t hb_recv_prev_time = 0;
+static bool hb_seen = false;          // 正規のsenderから[hb]を1回でも受信したか(prev_time_lockで保護)
+static bool hb_cb_pending = false;    // [hb]を受信済みで、[hb][cb]の返信が未送信か(prev_time_lockで保護)
 static portMUX_TYPE prev_time_lock = portMUX_INITIALIZER_UNLOCKED; // timelockの定義
-static uint8_t sender_mac[ESP_NOW_ETH_ALEN] = {};
-static bool is_mac_saved = false;
-static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED; // maclockの定義
+// static uint8_t sender_mac[ESP_NOW_ETH_ALEN] = {};
+// static bool is_mac_saved = false;
+// static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED; // maclockの定義
 static QueueHandle_t log_queue = nullptr; // ログ用のキューを初期化
+static const uint8_t mac_compare[ESP_NOW_ETH_ALEN] = {
+  0x8C, 0x94, 0xDF, 0xAA, 0x38, 0x5C
+};
 
 // 送信先とログの型指定
 struct pending_log_t {
@@ -51,24 +57,18 @@ struct pending_log_t {
     char message[128];
 };
 
-static bool get_sender_mac(uint8_t *mac) {
-    bool saved;
-    portENTER_CRITICAL(&sender_mac_lock);
-    saved = is_mac_saved;
-    if (saved) {
-        memcpy(mac, sender_mac, ESP_NOW_ETH_ALEN); // mac[6]に送信先のmacをコピーして保存
+
+static bool copy_sender_mac(uint8_t *mac) {
+    if (mac == nullptr) {
+        return false;
     }
-    portEXIT_CRITICAL(&sender_mac_lock);
-    return saved;
+    memcpy(mac, mac_compare, ESP_NOW_ETH_ALEN);
+    return true;
+    
 }
 
-static bool is_saved_sender(const uint8_t *mac) {
-    bool matches;
-    portENTER_CRITICAL(&sender_mac_lock);
-    matches = is_mac_saved &&
-        memcmp(sender_mac, mac, ESP_NOW_ETH_ALEN) == 0; // sender_macとmacをESP_NOW_ETH_ALEN(6 byte)だけ比較する
-    portEXIT_CRITICAL(&sender_mac_lock);
-    return matches;
+static bool is_match_sender(const uint8_t *mac) {
+    return mac != nullptr && memcmp(mac_compare, mac, ESP_NOW_ETH_ALEN) == 0;
 }
 
 // prev_timeのアップデート
@@ -79,10 +79,36 @@ static void update_prev_time() {
 }
 
 // prev_timeの取得
-static uint64_t get_prev_time() {
-    uint64_t value;
+static uint32_t get_prev_time() {
+    uint32_t value;
     portENTER_CRITICAL(&prev_time_lock);
     value = hb_recv_prev_time;
+    portEXIT_CRITICAL(&prev_time_lock);
+    return value;
+}
+
+// [hb]受信時にコールバックから呼ぶ: 受信時刻の更新 + 受信済みフラグ + cb返信要求
+static void on_hb_received() {
+    portENTER_CRITICAL(&prev_time_lock);
+    hb_recv_prev_time = get_millis();
+    hb_seen = true;
+    hb_cb_pending = true;
+    portEXIT_CRITICAL(&prev_time_lock);
+}
+
+// 正規senderから[hb]を受信済みか
+static bool is_hb_seen() {
+    portENTER_CRITICAL(&prev_time_lock);
+    bool value = hb_seen;
+    portEXIT_CRITICAL(&prev_time_lock);
+    return value;
+}
+
+// cb返信要求を取得してクリアする(要求があればtrue)
+static bool take_hb_cb_pending() {
+    portENTER_CRITICAL(&prev_time_lock);
+    bool value = hb_cb_pending;
+    hb_cb_pending = false;
     portEXIT_CRITICAL(&prev_time_lock);
     return value;
 }
@@ -136,35 +162,28 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
 
     // 受信サイズが構造体のサイズと一致しているかチェック
     if (len == sizeof(struct_t)) {
-        portENTER_CRITICAL(&sender_mac_lock);
-        if (!is_mac_saved) {
-            memcpy(sender_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN);
-            is_mac_saved = true;
-        }
-        bool accepted_sender =
-            memcmp(sender_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN) == 0;
-        portEXIT_CRITICAL(&sender_mac_lock);
-
         // src_addrとESP_NOW_ETH_ALENが一致しないので正常にメッセージが送れない可能性がある
-        if (!accepted_sender) {
-            ESP_LOGW(RECEIVE_CALLBACK, "ignoring packet from unexpected sender");
+        if (memcmp(mac_compare, recv_info->src_addr, ESP_NOW_ETH_ALEN) != 0) {
+            ESP_LOGW(RECEIVE_CALLBACK, "ignoring packet from unexpected sender " MACSTR " (expected " MACSTR ")",
+                MAC2STR(recv_info->src_addr), MAC2STR(mac_compare));
             return;
         }
+        
         struct_t recv_data;
-        // memcpy(&recv_data, data, sizeof(recv_data));
+        memcpy(&recv_data, data, sizeof(recv_data));
 
         size_t message_len = strnlen(recv_data.message, sizeof(recv_data.message));
 
         // HB受信判定
         if (message_len >= 4 && memcmp(recv_data.message, "[hb]", 4) == 0) {
-            update_prev_time();
+            on_hb_received();
         }
 
     } else {
         ESP_LOGE(RECEIVE_CALLBACK, "receive data are missmatch");
 
-        // is_saved_senderとlog_queueがnullptrでなければtrue
-        if (is_saved_sender(recv_info->src_addr) && log_queue != nullptr) {
+        // is_match_senderとlog_queueがnullptrでなければtrue
+        if (is_match_sender(recv_info->src_addr) && log_queue != nullptr) {
             pending_log_t pending = {};
             memcpy(pending.dest_mac, recv_info->src_addr, ESP_NOW_ETH_ALEN);
             snprintf(pending.message, sizeof(pending.message),
@@ -214,6 +233,7 @@ extern "C" void app_main() {
     init_wifi();
     print_mac();
     ESP_ERROR_CHECK(esp_now_init()); // initialize esp-now
+    
     log_queue = xQueueCreate(4, sizeof(pending_log_t));
     ESP_ERROR_CHECK(log_queue == nullptr ? ESP_ERR_NO_MEM : ESP_OK);
 
@@ -228,6 +248,7 @@ extern "C" void app_main() {
     // const struct_t *recv_data = reinterpret_cast<const struct_t*>(data); // キャスト
     // esp_now_recv_info *recv_data;
     int level = 1; // HIGH/LOWの定義
+    int info_cnt = 0; // [info]ログを1秒(10ループ)ごとに送るためのカウンタ
 
     typedef enum {
         STATE_SYNC,
@@ -241,15 +262,16 @@ extern "C" void app_main() {
     while (1) {
         switch (cur_state) {
             case STATE_SYNC: {
-                ESP_LOGI(STATUS, "STATE_CYNC");
+                ESP_LOGI(STATUS, "STATE_SYNC");
                 uint8_t current_sender_mac[ESP_NOW_ETH_ALEN];
-                if(get_sender_mac(current_sender_mac)) {
+                // 正規senderから最初の[hb]を受信できたらNORMALへ遷移
+                if (copy_sender_mac(current_sender_mac) && is_hb_seen()) {
                     ESP_LOGI(STATUS, "sync successfully");
                     update_prev_time();
                     cur_state = STATE_NORMAL; // NORMALへ遷移
                 } else {
-                    ESP_LOGE(STATUS, "sync unsuccessful");
-                    ESP_LOGE(STATUS, "sender MAC has not been received yet");
+                    ESP_LOGW(STATUS, "sync unsuccessful");
+                    ESP_LOGW(STATUS, "first [hb] from sender has not been received yet");
                 }
                 break;
             }
@@ -262,7 +284,7 @@ extern "C" void app_main() {
                     cur_state = STATE_ERR; // ERRへ遷移
                 } else {
                     uint8_t current_sender_mac[ESP_NOW_ETH_ALEN];
-                    if (!get_sender_mac(current_sender_mac)) {
+                    if (!copy_sender_mac(current_sender_mac)) {
                         ESP_LOGE(RECV, "sender MAC is unavailable");
                         break;
                     }
@@ -270,15 +292,20 @@ extern "C" void app_main() {
                     while (xQueueReceive(log_queue, &pending, 0) == pdPASS) {
                         send_log_to_sender(pending.dest_mac, "%s", pending.message);
                     }
-                    send_log_to_sender(current_sender_mac, "[hb][cb]");
-                    if  (level == 1) {
-                        ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
-                        send_log_to_sender(current_sender_mac, "[info] GPIO_PIN_4 is HIGH");
-                    } else {
-                        ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
-                        send_log_to_sender(current_sender_mac, "[info] GPIO_PIN_4 is LOW");
+                    // [hb]を受信した時だけ[hb][cb]を返す(往路の疎通もsender側で確認できる)
+                    if (take_hb_cb_pending()) {
+                        send_log_to_sender(mac_compare, "[hb][cb]");
+                    } else if (++info_cnt >= 10) { // cbと同じループでは送らない(連続送信によるNO_MEM回避)
+                        info_cnt = 0;
+                        if  (level == 1) {
+                            ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
+                            send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is HIGH");
+                        } else {
+                            ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
+                            send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is LOW");
+                        }
+                        level = !level; // debug
                     }
-                    level = !level; // debug
 
                 }
                 break;
