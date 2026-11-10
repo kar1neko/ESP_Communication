@@ -48,8 +48,9 @@ static portMUX_TYPE prev_time_lock = portMUX_INITIALIZER_UNLOCKED; // timelock�
 // static portMUX_TYPE sender_mac_lock = portMUX_INITIALIZER_UNLOCKED; // maclockの定義
 static QueueHandle_t log_queue = nullptr; // ログ用のキューを初期化
 static const uint8_t mac_compare[ESP_NOW_ETH_ALEN] = {
-  0x8C, 0x94, 0xDF, 0xAA, 0x38, 0x5C
+  0x10, 0xBD, 0xA3, 0x9D, 0x49, 0xC4
 };
+static int8_t rssi = 0;
 
 // 送信先とログの型指定
 struct pending_log_t {
@@ -154,6 +155,9 @@ void send_log_to_sender(const uint8_t *dest_mac, const char* format, ...) { // d
 
 // receive cb
 static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len) { // recv_info -> 送信元のMacAddress、RSSIなどが格納された構造体のポインタ
+
+    rssi = recv_info->rx_ctrl->rssi; // RSSI格納
+    
     if (recv_info == nullptr || recv_info->src_addr == nullptr || len < 0 ||
         (len > 0 && data == nullptr)) {
         ESP_LOGE(RECEIVE_CALLBACK, "invalid ESP-NOW receive arguments");
@@ -177,6 +181,9 @@ static void on_data_recv(const esp_now_recv_info_t *recv_info, const uint8_t *da
         // HB受信判定
         if (message_len >= 4 && memcmp(recv_data.message, "[hb]", 4) == 0) {
             on_hb_received();
+        }
+        if (recv_info->rx_ctrl != nullptr) {
+            rssi = recv_info->rx_ctrl->rssi; // rssi値の取得
         }
 
     } else {
@@ -227,6 +234,7 @@ void init_wifi() {
     ESP_LOGI(RECV, "Starting wifi...");
 }
 
+// 物理ボタンに信号が入ったらnormalに復帰
 // main
 extern "C" void app_main() {
     init_NVS();
@@ -279,7 +287,7 @@ extern "C" void app_main() {
             case STATE_NORMAL: {
                 ESP_LOGI(STATUS, "STATE_NORMAL");
                 gpio_set_level(CONTROL_PIN, 0);
-                if (get_millis() - get_prev_time() >= 1500) {
+                if (get_millis() - get_prev_time() >= 150000) {
                     ESP_LOGE(RECV, "fail to receive HB.");
                     cur_state = STATE_ERR; // ERRへ遷移
                 } else {
@@ -292,19 +300,20 @@ extern "C" void app_main() {
                     while (xQueueReceive(log_queue, &pending, 0) == pdPASS) {
                         send_log_to_sender(pending.dest_mac, "%s", pending.message);
                     }
+                    send_log_to_sender(mac_compare, "RSSI val: %d dBm", rssi); // rssi値送信
                     // [hb]を受信した時だけ[hb][cb]を返す(往路の疎通もsender側で確認できる)
                     if (take_hb_cb_pending()) {
-                        send_log_to_sender(mac_compare, "[hb][cb]");
+                        send_log_to_sender(mac_compare, "[hb][cb] rssi: %d dBm", rssi);
                     } else if (++info_cnt >= 10) { // cbと同じループでは送らない(連続送信によるNO_MEM回避)
                         info_cnt = 0;
-                        if  (level == 1) {
-                            ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
-                            send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is HIGH");
-                        } else {
-                            ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
-                            send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is LOW");
-                        }
-                        level = !level; // debug
+                        // if  (level == 1) {
+                        //     ESP_LOGI(RECV, "GPIO_PIN_4 is HIGH");
+                        //     send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is HIGH");
+                        // } else {
+                        //     ESP_LOGI(RECV, "GPIO_PIN_4 is LOW");
+                        //     send_log_to_sender(mac_compare, "[info] GPIO_PIN_4 is LOW");
+                        // }
+                        // level = !level; // debug
                     }
 
                 }
@@ -312,6 +321,7 @@ extern "C" void app_main() {
             }
 
             case STATE_ERR: {
+                // 物理ボタンに信号が入ったらnormalに復帰
                 gpio_set_level(CONTROL_PIN, 0);
                 ESP_LOGE(STATUS, "error: connection lost");
                 break;

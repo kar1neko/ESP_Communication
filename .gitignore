@@ -4,3 +4,4 @@ build/
 dskconfig
 sdkconfig.old
 sdkconfig
+data/
