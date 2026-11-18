@@ -1,6 +1,9 @@
-.clangd
-.cache
-build/
-dskconfig
-sdkconfig.old
-sdkconfig
+esp/.clangd
+esp/.cache
+esp/build/
+esp/dskconfig
+esp/sdkconfig.old
+esp/sdkconfig
+esp/data/
+esp/.git
+esp/.gitignore

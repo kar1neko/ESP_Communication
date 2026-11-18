@@ -1,0 +1,17 @@
+name: Hello
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: あいさつ
+        run: echo "Hello from GitHub Actions!"
+
+      - name: 情報を表示
+        run: |
+          echo "リポジトリ: ${{ github.repository }}"
+          echo "ブランチ: ${{ github.ref_name }}"
+          echo "pushした人: ${{ github.actor }}"
