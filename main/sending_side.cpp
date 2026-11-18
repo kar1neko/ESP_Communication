@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <cstring>
 #include <stdlib.h>
+#include <string.h>
 #include <string>
 #include "driver/gpio.h"
 #include "esp_err.h"
@@ -20,6 +21,7 @@
 #include "nvs_flash.h"
 #include "esp_mac.h"
 #include "common.h"
+#include "portmacro.h"
 #include "soc/gpio_num.h"
 #include "esp_timer.h"
 #include "esp_rom_sys.h"
@@ -33,10 +35,16 @@
 static const char *MAC_ADDRESS = "SEND_MAC_ADDRESS";
 static const char *LOG = "SEND_LOG";
 static const char *r_LOG = "recv_LOG";
-static uint8_t receiver_mac[6] = {0x04, 0x83, 0x08, 0x0E, 0x53, 0x04}; // 受信側のMac Address
+static uint8_t receiver_mac[6] = {
+    0x10, 0xbd, 0xa3, 0x9d, 0x8c, 0x54
+}; // 受信側のMac Address
 
+static volatile int8_t remote_rssi = 0; // 受信側が測定したrssi値 sender -> receiver 
+static volatile int8_t local_rssi = 0; // 送信側が測定したrssi値 receiver -> sender
 
 #define CONTROL_PIN GPIO_NUM_4
+#define CSV_OUTPUT GPIO_NUM_20 // D9 GPIO20 SPI_MISO
+#define LOSS_LOG_MAX 128
 
 // // 関数定義
 // void init_NVS();
@@ -45,6 +53,17 @@ static uint8_t receiver_mac[6] = {0x04, 0x83, 0x08, 0x0E, 0x53, 0x04}; // 受信
 // void print_macAddress();
 // void on_log_recv();
 // uint32_t get_millis();
+
+struct loss_log_t {
+    uint32_t t_loss_ms;
+    uint32_t t_loss_num;
+    int8_t t_remote_rssi;
+    int8_t t_local_rssi;
+};
+static loss_log_t loss_log[LOSS_LOG_MAX];
+static uint32_t loss_total = 0;
+static uint32_t send_total = 0;
+static portMUX_TYPE loss_log_lock = portMUX_INITIALIZER_UNLOCKED;
 
 inline uint32_t get_millis() {
     return esp_timer_get_time() / 1000;
@@ -77,11 +96,24 @@ void init_wifi() {
     ESP_ERROR_CHECK(esp_wifi_set_channel(1, WIFI_SECOND_CHAN_NONE)); // チャンネルを明示的に固定
 }
 
+int packet_lost_cnt = 0;
+
 static void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+    portENTER_CRITICAL(&loss_log_lock); // 鍵解除
+    send_total++;
+    if (status != ESP_NOW_SEND_SUCCESS) {
+        loss_log_t &e = loss_log[loss_total % LOSS_LOG_MAX];
+        e.t_loss_ms = get_millis();
+        e.t_remote_rssi = remote_rssi;
+        e.t_local_rssi = local_rssi;
+        loss_total++;
+    }
+    portEXIT_CRITICAL(&loss_log_lock);
     if (status == ESP_NOW_SEND_SUCCESS) {
         ESP_LOGI(LOG, "send success!");
     } else {
         ESP_LOGE(LOG, "send fail");
+        packet_lost_cnt++;
     }
 }
 
@@ -104,10 +136,29 @@ static void on_log_recv(const esp_now_recv_info_t *recv_info, const uint8_t *dat
     } else if (len >= 6 && memcmp(data, "[Eror]", 6) == 0) {
         ESP_LOGE(r_LOG, "%.*s", len, (const char *)data);
         // ESP_LOGI(LOG, "through point2!");
-    } else if (len >= 8 && memcmp(data, "[hb][cb]", 8) == 0) {
+    } else if (len >= 8 && memcmp(data, "[hb][cb]", 8) == 0) { // heartbeat判定
         portENTER_CRITICAL(&recv_hbcb_lock);
         recv_hbcb = true;
         portEXIT_CRITICAL(&recv_hbcb_lock);
+
+        if (recv_info->rx_ctrl != nullptr) {
+            local_rssi = recv_info->rx_ctrl->rssi; // sender側が測定したrssi値を格納
+        }
+
+        char text[32];
+        /*
+         *  受信データはstrlenで終端の"\0"が無い
+         * この状態でatoiなどを実行すると範囲外を読むことがあるため、三項演算子を使って長さの制限を行う
+         */
+        int n = (size_t)len < sizeof(text) -1 ? (size_t)len : sizeof(text) -1;
+        memcpy(text, data, n);
+        text[n] = '\0'; // 終端"\0"を追加
+        // strstr(const char *, const char *) char1: 検索対象となるメインの文字列 char2: 探したい部分文字列
+        const char *p = strstr(text, "rssi:"); // pにtextの中からrssi:から始まるポインタを格納する
+        if(p != nullptr) {
+            remote_rssi = (int8_t)atoi(p + 7); // 文字列をint8_tに変換。開始ポイントはp + 7byte.
+        }
+        
     }
 }
 
@@ -130,6 +181,35 @@ static bool take_hbcb() {
     recv_hbcb = false;
     portEXIT_CRITICAL(&recv_hbcb_lock);
     return value;
+}
+
+// パケットロスト記録をCSVでシリアルに出力
+static void dump_lossCSV() {
+    portENTER_CRITICAL(&loss_log_lock);
+    uint32_t total = loss_total;
+    uint32_t loss = loss_total;
+    uint32_t sent = send_total;
+    portEXIT_CRITICAL(&loss_log_lock);
+
+    uint32_t cnt = total < LOSS_LOG_MAX ? total : LOSS_LOG_MAX;
+    uint32_t start = total - cnt;
+
+    printf("CSV_BEGIN,send_total=%lu,loss_total=%lu\n", (unsigned long)sent, (unsigned long)total);
+    printf("time_ms,loss_num,remote_rssi_dBm,local_rssi_dBm\n");
+    for (uint32_t i=0; i < cnt; i++) {
+        loss_log_t e;
+        portENTER_CRITICAL(&loss_log_lock);
+        e = loss_log[(start + i) % LOSS_LOG_MAX];
+        portEXIT_CRITICAL(&loss_log_lock);
+        printf(
+            "%lu,%lu,%d,%d\n",
+            (unsigned long)e.t_loss_ms,
+            (unsigned long)e.t_loss_num,
+            (int)e.t_remote_rssi,
+            (int)e.t_local_rssi
+        );
+    }
+    printf("CSV_END\n");
 }
 
 // TODO levelのHIGH/LOW指示 sedner -> reciver
@@ -156,6 +236,11 @@ extern "C" void app_main() {
     int level = 0;
     // std::string s = "natinal institute of technology asahikawa-collage";
     uint32_t success_prev_time = 0, sent_hb_time = 0;
+
+    gpio_reset_pin(CSV_OUTPUT);
+    gpio_set_direction(CSV_OUTPUT, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(CSV_OUTPUT, GPIO_PULLDOWN_ONLY);
+    int prev_level = gpio_get_level(CSV_OUTPUT);
 
     //TODO level指示をsender側から行う
     typedef enum {
@@ -200,7 +285,12 @@ extern "C" void app_main() {
                     success_prev_time = get_millis();
                 }
 
-                if (get_millis() - success_prev_time >= 1500) {
+                ESP_LOGI(
+                    r_LOG, "RSSI val. remote(send->recv):%d dBm, local(recv->send):%d dBm", 
+                    remote_rssi, local_rssi
+                );
+
+                if (get_millis() - success_prev_time >= 150000) {
                     ESP_LOGE("STATE_LOG", "error! disconnected recv");
                     cur_state = STATE_ERR;
                 }
@@ -211,10 +301,19 @@ extern "C" void app_main() {
             // FIXME この状態ではsender側はerrに遷移しない
             case STATE_ERR: {
                 ESP_LOGE(LOG, "error occurred!");
+                dump_lossCSV();
 
                 break;
             }
         }
+
+        int level_now = gpio_get_level(CSV_OUTPUT);
+        // CSV_OUTPUT押下でcsv output
+        if (prev_level == 0 && level_now == 1) {
+            dump_lossCSV();
+            ESP_LOGI(LOG, "fucking saved!!!!!");
+        }
+        prev_level = level_now;
 
         // snprintf(send_data.message, sizeof(send_data.message), "%d", cnt);
         // esp_err_t result = esp_now_send(receiver_mac, (const uint8_t *)&send_data, sizeof(send_data));

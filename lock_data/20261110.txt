@@ -1,0 +1,2657 @@
+I (651) wifi:mode : sta (10:bd:a3:9d:49:c4)
+I (651) wifi:enable tsf
+I (661) ESPNOW: espnow [version: 1.0] init
+I (661) SEND_MAC_ADDRESS: MAC Address: 10:bd:a3:9d:49:c4
+I (671) gpio: GPIO[20]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0
+I (681) SEND_LOG: sync timer
+I (681) SEND_LOG: send success!
+I (781) SEND_LOG: sync timer
+I (781) SEND_LOG: sync successfully
+I (881) SEND_LOG: status: normal
+I (881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (981) SEND_LOG: status: normal
+I (981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (1081) SEND_LOG: status: normal
+I (1081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (1081) SEND_LOG: send success!
+I (1181) SEND_LOG: status: normal
+I (1181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-60 dBm
+I (1281) SEND_LOG: status: normal
+I (1281) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-60 dBm
+I (1381) SEND_LOG: status: normal
+I (1381) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-60 dBm
+I (1381) SEND_LOG: send success!
+I (1481) SEND_LOG: status: normal
+I (1481) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (1581) SEND_LOG: status: normal
+I (1581) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (1681) SEND_LOG: status: normal
+I (1681) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (1681) SEND_LOG: send success!
+I (1781) SEND_LOG: status: normal
+I (1781) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (1881) SEND_LOG: status: normal
+I (1881) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (1981) SEND_LOG: status: normal
+I (1981) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (1981) SEND_LOG: send success!
+I (2081) SEND_LOG: status: normal
+I (2081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (2181) SEND_LOG: status: normal
+I (2181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (2281) SEND_LOG: status: normal
+I (2281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (2281) SEND_LOG: send success!
+I (2381) SEND_LOG: status: normal
+I (2381) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (2481) SEND_LOG: status: normal
+I (2481) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (2581) SEND_LOG: status: normal
+I (2581) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (2581) SEND_LOG: send success!
+I (2681) SEND_LOG: status: normal
+I (2681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (2781) SEND_LOG: status: normal
+I (2781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (2881) SEND_LOG: status: normal
+I (2881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (2881) SEND_LOG: send success!
+I (2981) SEND_LOG: status: normal
+I (2981) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (3081) SEND_LOG: status: normal
+I (3081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (3181) SEND_LOG: status: normal
+I (3181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (3181) SEND_LOG: send success!
+I (3281) SEND_LOG: status: normal
+I (3281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (3381) SEND_LOG: status: normal
+I (3381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (3481) SEND_LOG: status: normal
+I (3481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (3481) SEND_LOG: send success!
+I (3581) SEND_LOG: status: normal
+I (3581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (3681) SEND_LOG: status: normal
+I (3681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (3781) SEND_LOG: status: normal
+I (3781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (3781) SEND_LOG: send success!
+I (3881) SEND_LOG: status: normal
+I (3881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (3981) SEND_LOG: status: normal
+I (3981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (4081) SEND_LOG: status: normal
+I (4081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (4081) SEND_LOG: send success!
+I (4181) SEND_LOG: status: normal
+I (4181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (4281) SEND_LOG: status: normal
+I (4281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (4381) SEND_LOG: status: normal
+I (4381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (4381) SEND_LOG: send success!
+I (4481) SEND_LOG: status: normal
+I (4481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (4581) SEND_LOG: status: normal
+I (4581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (4681) SEND_LOG: status: normal
+I (4681) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (4681) SEND_LOG: send success!
+I (4781) SEND_LOG: status: normal
+I (4781) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (4881) SEND_LOG: status: normal
+I (4881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (4981) SEND_LOG: status: normal
+I (4981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (4981) SEND_LOG: send success!
+I (5081) SEND_LOG: status: normal
+I (5081) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (5181) SEND_LOG: status: normal
+I (5181) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (5281) SEND_LOG: status: normal
+I (5281) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (5281) SEND_LOG: send success!
+I (5381) SEND_LOG: status: normal
+I (5381) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-68 dBm
+I (5481) SEND_LOG: status: normal
+I (5481) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-68 dBm
+I (5581) SEND_LOG: status: normal
+I (5581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-68 dBm
+I (5581) SEND_LOG: send success!
+I (5681) SEND_LOG: status: normal
+I (5681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (5781) SEND_LOG: status: normal
+I (5781) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (5881) SEND_LOG: status: normal
+I (5881) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (5881) SEND_LOG: send success!
+I (5981) SEND_LOG: status: normal
+I (5981) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (6081) SEND_LOG: status: normal
+I (6081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (6181) SEND_LOG: status: normal
+I (6181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (6181) SEND_LOG: send success!
+I (6281) SEND_LOG: status: normal
+I (6281) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (6381) SEND_LOG: status: normal
+I (6381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (6481) SEND_LOG: status: normal
+I (6481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (6481) SEND_LOG: send success!
+I (6581) SEND_LOG: status: normal
+I (6581) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-74 dBm
+I (6681) SEND_LOG: status: normal
+I (6681) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-74 dBm
+I (6781) SEND_LOG: status: normal
+I (6781) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-74 dBm
+I (6781) SEND_LOG: send success!
+I (6881) SEND_LOG: status: normal
+I (6881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (6981) SEND_LOG: status: normal
+I (6981) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (7081) SEND_LOG: status: normal
+I (7081) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (7081) SEND_LOG: send success!
+I (7181) SEND_LOG: status: normal
+I (7181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (7281) SEND_LOG: status: normal
+I (7281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (7381) SEND_LOG: status: normal
+I (7381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (7381) SEND_LOG: send success!
+I (7481) SEND_LOG: status: normal
+I (7481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (7581) SEND_LOG: status: normal
+I (7581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (7681) SEND_LOG: status: normal
+I (7681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (7681) SEND_LOG: send success!
+I (7781) SEND_LOG: status: normal
+I (7781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (7881) SEND_LOG: status: normal
+I (7881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (7981) SEND_LOG: status: normal
+I (7981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (7981) SEND_LOG: send success!
+I (8081) SEND_LOG: status: normal
+I (8081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (8181) SEND_LOG: status: normal
+I (8181) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (8281) SEND_LOG: status: normal
+I (8281) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (8281) SEND_LOG: send success!
+I (8381) SEND_LOG: status: normal
+I (8381) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (8481) SEND_LOG: status: normal
+I (8481) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (8581) SEND_LOG: status: normal
+I (8581) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (8581) SEND_LOG: send success!
+I (8681) SEND_LOG: status: normal
+I (8681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (8781) SEND_LOG: status: normal
+I (8781) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (8881) SEND_LOG: status: normal
+I (8881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (8881) SEND_LOG: send success!
+I (8981) SEND_LOG: status: normal
+I (8981) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (9081) SEND_LOG: status: normal
+I (9081) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (9181) SEND_LOG: status: normal
+I (9181) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (9181) SEND_LOG: send success!
+I (9281) SEND_LOG: status: normal
+I (9281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (9381) SEND_LOG: status: normal
+I (9381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (9481) SEND_LOG: status: normal
+I (9481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (9481) SEND_LOG: send success!
+I (9581) SEND_LOG: status: normal
+I (9581) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (9681) SEND_LOG: status: normal
+I (9681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (9781) SEND_LOG: status: normal
+I (9781) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (9781) SEND_LOG: send success!
+I (9881) SEND_LOG: status: normal
+I (9881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (9981) SEND_LOG: status: normal
+I (9981) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (10081) SEND_LOG: status: normal
+I (10081) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (10081) SEND_LOG: send success!
+I (10181) SEND_LOG: status: normal
+I (10181) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (10281) SEND_LOG: status: normal
+I (10281) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (10381) SEND_LOG: status: normal
+I (10381) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (10381) SEND_LOG: send success!
+I (10481) SEND_LOG: status: normal
+I (10481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (10581) SEND_LOG: status: normal
+I (10581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (10681) SEND_LOG: status: normal
+I (10681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (10681) SEND_LOG: send success!
+I (10781) SEND_LOG: status: normal
+I (10781) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-60 dBm
+I (10881) SEND_LOG: status: normal
+I (10881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-60 dBm
+I (10981) SEND_LOG: status: normal
+I (10981) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-60 dBm
+I (10981) SEND_LOG: send success!
+I (11081) SEND_LOG: status: normal
+I (11081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (11181) SEND_LOG: status: normal
+I (11181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (11281) SEND_LOG: status: normal
+I (11281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (11281) SEND_LOG: send success!
+I (11381) SEND_LOG: status: normal
+I (11381) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (11481) SEND_LOG: status: normal
+I (11481) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (11581) SEND_LOG: status: normal
+I (11581) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (11581) SEND_LOG: send success!
+I (11681) SEND_LOG: status: normal
+I (11681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (11781) SEND_LOG: status: normal
+I (11781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (11881) SEND_LOG: status: normal
+I (11881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (11881) SEND_LOG: send success!
+I (11981) SEND_LOG: status: normal
+I (11981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-63 dBm
+I (12081) SEND_LOG: status: normal
+I (12081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-63 dBm
+I (12181) SEND_LOG: status: normal
+I (12181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-63 dBm
+I (12181) SEND_LOG: send success!
+I (12281) SEND_LOG: status: normal
+I (12281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (12381) SEND_LOG: status: normal
+I (12381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (12481) SEND_LOG: status: normal
+I (12481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (12481) SEND_LOG: send success!
+I (12581) SEND_LOG: status: normal
+I (12581) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (12681) SEND_LOG: status: normal
+I (12681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (12781) SEND_LOG: status: normal
+I (12781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (12781) SEND_LOG: send success!
+I (12881) SEND_LOG: status: normal
+I (12881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (12981) SEND_LOG: status: normal
+I (12981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (13081) SEND_LOG: status: normal
+I (13081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (13081) SEND_LOG: send success!
+I (13181) SEND_LOG: status: normal
+I (13181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (13281) SEND_LOG: status: normal
+I (13281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (13381) SEND_LOG: status: normal
+I (13381) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (13381) SEND_LOG: send success!
+I (13481) SEND_LOG: status: normal
+I (13481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (13581) SEND_LOG: status: normal
+I (13581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (13681) SEND_LOG: status: normal
+I (13681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (13681) SEND_LOG: send success!
+I (13781) SEND_LOG: status: normal
+I (13781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (13881) SEND_LOG: status: normal
+I (13881) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (13981) SEND_LOG: status: normal
+I (13981) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (13981) SEND_LOG: send success!
+I (14081) SEND_LOG: status: normal
+I (14081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14181) SEND_LOG: status: normal
+I (14181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14281) SEND_LOG: status: normal
+I (14281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14281) SEND_LOG: send success!
+I (14381) SEND_LOG: status: normal
+I (14381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14481) SEND_LOG: status: normal
+I (14481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14581) SEND_LOG: status: normal
+I (14581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14581) SEND_LOG: send success!
+I (14681) SEND_LOG: status: normal
+I (14681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14781) SEND_LOG: status: normal
+I (14781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14881) SEND_LOG: status: normal
+I (14881) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (14881) SEND_LOG: send success!
+I (14981) SEND_LOG: status: normal
+I (14981) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (15081) SEND_LOG: status: normal
+I (15081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (15181) SEND_LOG: status: normal
+I (15181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (15181) SEND_LOG: send success!
+I (15281) SEND_LOG: status: normal
+I (15281) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (15381) SEND_LOG: status: normal
+I (15381) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (15481) SEND_LOG: status: normal
+I (15481) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (15481) SEND_LOG: send success!
+I (15581) SEND_LOG: status: normal
+I (15581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (15681) SEND_LOG: status: normal
+I (15681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (15781) SEND_LOG: status: normal
+I (15781) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (15781) SEND_LOG: send success!
+I (15881) SEND_LOG: status: normal
+I (15881) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (15981) SEND_LOG: status: normal
+I (15981) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (16081) SEND_LOG: status: normal
+I (16081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (16081) SEND_LOG: send success!
+I (16181) SEND_LOG: status: normal
+I (16181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (16281) SEND_LOG: status: normal
+I (16281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (16381) SEND_LOG: status: normal
+I (16381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (16381) SEND_LOG: send success!
+I (16481) SEND_LOG: status: normal
+I (16481) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (16581) SEND_LOG: status: normal
+I (16581) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (16681) SEND_LOG: status: normal
+I (16681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (16681) SEND_LOG: send success!
+I (16781) SEND_LOG: status: normal
+I (16781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (16881) SEND_LOG: status: normal
+I (16881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (16981) SEND_LOG: status: normal
+I (16981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (16981) SEND_LOG: send success!
+I (17081) SEND_LOG: status: normal
+I (17081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (17181) SEND_LOG: status: normal
+I (17181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (17281) SEND_LOG: status: normal
+I (17281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (17281) SEND_LOG: send success!
+I (17381) SEND_LOG: status: normal
+I (17381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (17481) SEND_LOG: status: normal
+I (17481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (17581) SEND_LOG: status: normal
+I (17581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (17581) SEND_LOG: send success!
+I (17681) SEND_LOG: status: normal
+I (17681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (17781) SEND_LOG: status: normal
+I (17781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (17881) SEND_LOG: status: normal
+I (17881) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (17881) SEND_LOG: send success!
+I (17981) SEND_LOG: status: normal
+I (17981) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (18081) SEND_LOG: status: normal
+I (18081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (18181) SEND_LOG: status: normal
+I (18181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (18181) SEND_LOG: send success!
+I (18281) SEND_LOG: status: normal
+I (18281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (18381) SEND_LOG: status: normal
+I (18381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (18481) SEND_LOG: status: normal
+I (18481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (18481) SEND_LOG: send success!
+I (18581) SEND_LOG: status: normal
+I (18581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (18681) SEND_LOG: status: normal
+I (18681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (18781) SEND_LOG: status: normal
+I (18781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (18781) SEND_LOG: send success!
+I (18881) SEND_LOG: status: normal
+I (18881) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (18981) SEND_LOG: status: normal
+I (18981) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (19081) SEND_LOG: status: normal
+I (19081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (19081) SEND_LOG: send success!
+I (19181) SEND_LOG: status: normal
+I (19181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (19281) SEND_LOG: status: normal
+I (19281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (19381) SEND_LOG: status: normal
+I (19381) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (19381) SEND_LOG: send success!
+I (19481) SEND_LOG: status: normal
+I (19481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (19581) SEND_LOG: status: normal
+I (19581) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (19681) SEND_LOG: status: normal
+I (19681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (19681) SEND_LOG: send success!
+I (19781) SEND_LOG: status: normal
+I (19781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (19881) SEND_LOG: status: normal
+I (19881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (19981) SEND_LOG: status: normal
+I (19981) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (19981) SEND_LOG: send success!
+I (20081) SEND_LOG: status: normal
+I (20081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (20181) SEND_LOG: status: normal
+I (20181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (20281) SEND_LOG: status: normal
+I (20281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (20281) SEND_LOG: send success!
+I (20381) SEND_LOG: status: normal
+I (20381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (20481) SEND_LOG: status: normal
+I (20481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (20581) SEND_LOG: status: normal
+I (20581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (20581) SEND_LOG: send success!
+I (20681) SEND_LOG: status: normal
+I (20681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (20781) SEND_LOG: status: normal
+I (20781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (20881) SEND_LOG: status: normal
+I (20881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (20881) SEND_LOG: send success!
+I (20981) SEND_LOG: status: normal
+I (20981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (21081) SEND_LOG: status: normal
+I (21081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (21181) SEND_LOG: status: normal
+I (21181) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (21181) SEND_LOG: send success!
+I (21281) SEND_LOG: status: normal
+I (21281) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (21381) SEND_LOG: status: normal
+I (21381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (21481) SEND_LOG: status: normal
+I (21481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (21481) SEND_LOG: send success!
+I (21581) SEND_LOG: status: normal
+I (21581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-74 dBm
+I (21681) SEND_LOG: status: normal
+I (21681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-74 dBm
+I (21781) SEND_LOG: status: normal
+I (21781) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-74 dBm
+I (21781) SEND_LOG: send success!
+I (21881) SEND_LOG: status: normal
+I (21881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (21981) SEND_LOG: status: normal
+I (21981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (22081) SEND_LOG: status: normal
+I (22081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (22081) SEND_LOG: send success!
+I (22181) SEND_LOG: status: normal
+I (22181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (22281) SEND_LOG: status: normal
+I (22281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (22381) SEND_LOG: status: normal
+I (22381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (22381) SEND_LOG: send success!
+I (22481) SEND_LOG: status: normal
+I (22481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (22581) SEND_LOG: status: normal
+I (22581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (22681) SEND_LOG: status: normal
+I (22681) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (22681) SEND_LOG: send success!
+I (22781) SEND_LOG: status: normal
+I (22781) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (22881) SEND_LOG: status: normal
+I (22881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (22981) SEND_LOG: status: normal
+I (22981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (22981) SEND_LOG: send success!
+I (23081) SEND_LOG: status: normal
+I (23081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (23181) SEND_LOG: status: normal
+I (23181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (23281) SEND_LOG: status: normal
+I (23281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (23281) SEND_LOG: send success!
+I (23381) SEND_LOG: status: normal
+I (23381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (23481) SEND_LOG: status: normal
+I (23481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (23581) SEND_LOG: status: normal
+I (23581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (23581) SEND_LOG: send success!
+I (23681) SEND_LOG: status: normal
+I (23681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-58 dBm
+I (23781) SEND_LOG: status: normal
+I (23781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-58 dBm
+I (23881) SEND_LOG: status: normal
+I (23881) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-58 dBm
+I (23881) SEND_LOG: send success!
+I (23981) SEND_LOG: status: normal
+I (23981) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (24081) SEND_LOG: status: normal
+I (24081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (24181) SEND_LOG: status: normal
+I (24181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (24181) SEND_LOG: send success!
+I (24281) SEND_LOG: status: normal
+I (24281) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (24381) SEND_LOG: status: normal
+I (24381) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (24481) SEND_LOG: status: normal
+I (24481) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (24481) SEND_LOG: send success!
+I (24581) SEND_LOG: status: normal
+I (24581) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (24681) SEND_LOG: status: normal
+I (24681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (24781) SEND_LOG: status: normal
+I (24781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (24781) SEND_LOG: send success!
+I (24881) SEND_LOG: status: normal
+I (24881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (24981) SEND_LOG: status: normal
+I (24981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (25081) SEND_LOG: status: normal
+I (25081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (25081) SEND_LOG: send success!
+I (25181) SEND_LOG: status: normal
+I (25181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (25281) SEND_LOG: status: normal
+I (25281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (25381) SEND_LOG: status: normal
+I (25381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (25381) SEND_LOG: send success!
+I (25481) SEND_LOG: status: normal
+I (25481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (25581) SEND_LOG: status: normal
+I (25581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (25681) SEND_LOG: status: normal
+I (25681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (25681) SEND_LOG: send success!
+I (25781) SEND_LOG: status: normal
+I (25781) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (25881) SEND_LOG: status: normal
+I (25881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (25981) SEND_LOG: status: normal
+I (25981) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (25981) SEND_LOG: send success!
+I (26081) SEND_LOG: status: normal
+I (26081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-59 dBm
+I (26181) SEND_LOG: status: normal
+I (26181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-59 dBm
+I (26281) SEND_LOG: status: normal
+I (26281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-59 dBm
+I (26281) SEND_LOG: send success!
+I (26381) SEND_LOG: status: normal
+I (26381) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (26481) SEND_LOG: status: normal
+I (26481) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (26581) SEND_LOG: status: normal
+I (26581) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (26581) SEND_LOG: send success!
+I (26681) SEND_LOG: status: normal
+I (26681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (26781) SEND_LOG: status: normal
+I (26781) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (26881) SEND_LOG: status: normal
+I (26881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (26881) SEND_LOG: send success!
+I (26981) SEND_LOG: status: normal
+I (26981) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (27081) SEND_LOG: status: normal
+I (27081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (27181) SEND_LOG: status: normal
+I (27181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (27181) SEND_LOG: send success!
+I (27281) SEND_LOG: status: normal
+I (27281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (27381) SEND_LOG: status: normal
+I (27381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (27481) SEND_LOG: status: normal
+I (27481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (27481) SEND_LOG: send success!
+I (27581) SEND_LOG: status: normal
+I (27581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (27681) SEND_LOG: status: normal
+I (27681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (27781) SEND_LOG: status: normal
+I (27781) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (27781) SEND_LOG: send success!
+I (27881) SEND_LOG: status: normal
+I (27881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (27981) SEND_LOG: status: normal
+I (27981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (28081) SEND_LOG: status: normal
+I (28081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (28081) SEND_LOG: send success!
+I (28181) SEND_LOG: status: normal
+I (28181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (28281) SEND_LOG: status: normal
+I (28281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (28381) SEND_LOG: status: normal
+I (28381) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (28381) SEND_LOG: send success!
+I (28481) SEND_LOG: status: normal
+I (28481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (28581) SEND_LOG: status: normal
+I (28581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (28681) SEND_LOG: status: normal
+I (28681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (28681) SEND_LOG: send success!
+I (28781) SEND_LOG: status: normal
+I (28781) recv_LOG: RSSI val. remote(send->recv):85 dBm, local(recv->send):-79 dBm
+I (28881) SEND_LOG: status: normal
+I (28881) recv_LOG: RSSI val. remote(send->recv):85 dBm, local(recv->send):-79 dBm
+I (28981) SEND_LOG: status: normal
+I (28981) recv_LOG: RSSI val. remote(send->recv):85 dBm, local(recv->send):-79 dBm
+I (28981) SEND_LOG: send success!
+I (29081) SEND_LOG: status: normal
+I (29081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (29181) SEND_LOG: status: normal
+I (29181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (29281) SEND_LOG: status: normal
+I (29281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (29281) SEND_LOG: send success!
+I (29381) SEND_LOG: status: normal
+I (29381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (29481) SEND_LOG: status: normal
+I (29481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (29581) SEND_LOG: status: normal
+I (29581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (29581) SEND_LOG: send success!
+I (29681) SEND_LOG: status: normal
+I (29681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (29781) SEND_LOG: status: normal
+I (29781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (29881) SEND_LOG: status: normal
+I (29881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (29881) SEND_LOG: send success!
+I (29981) SEND_LOG: status: normal
+I (29981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (30081) SEND_LOG: status: normal
+I (30081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (30181) SEND_LOG: status: normal
+I (30181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (30181) SEND_LOG: send success!
+I (30281) SEND_LOG: status: normal
+I (30281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (30381) SEND_LOG: status: normal
+I (30381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (30481) SEND_LOG: status: normal
+I (30481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (30481) SEND_LOG: send success!
+I (30581) SEND_LOG: status: normal
+I (30581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (30681) SEND_LOG: status: normal
+I (30681) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (30781) SEND_LOG: status: normal
+I (30781) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (30781) SEND_LOG: send success!
+I (30881) SEND_LOG: status: normal
+I (30881) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-78 dBm
+I (30981) SEND_LOG: status: normal
+I (30981) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-78 dBm
+I (31081) SEND_LOG: status: normal
+I (31081) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-78 dBm
+I (31081) SEND_LOG: send success!
+I (31181) SEND_LOG: status: normal
+I (31181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (31281) SEND_LOG: status: normal
+I (31281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (31381) SEND_LOG: status: normal
+I (31381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (31381) SEND_LOG: send success!
+I (31481) SEND_LOG: status: normal
+I (31481) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (31581) SEND_LOG: status: normal
+I (31581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (31681) SEND_LOG: status: normal
+I (31681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (31681) SEND_LOG: send success!
+I (31781) SEND_LOG: status: normal
+I (31781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (31881) SEND_LOG: status: normal
+I (31881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (31981) SEND_LOG: status: normal
+I (31981) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (31981) SEND_LOG: send success!
+I (32081) SEND_LOG: status: normal
+I (32081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (32181) SEND_LOG: status: normal
+I (32181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (32281) SEND_LOG: status: normal
+I (32281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (32281) SEND_LOG: send success!
+I (32381) SEND_LOG: status: normal
+I (32381) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (32481) SEND_LOG: status: normal
+I (32481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (32581) SEND_LOG: status: normal
+I (32581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (32581) SEND_LOG: send success!
+I (32681) SEND_LOG: status: normal
+I (32681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (32781) SEND_LOG: status: normal
+I (32781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (32881) SEND_LOG: status: normal
+I (32881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (32881) SEND_LOG: send success!
+I (32981) SEND_LOG: status: normal
+I (32981) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (33081) SEND_LOG: status: normal
+I (33081) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (33181) SEND_LOG: status: normal
+I (33181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (33181) SEND_LOG: send success!
+I (33281) SEND_LOG: status: normal
+I (33281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (33381) SEND_LOG: status: normal
+I (33381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (33481) SEND_LOG: status: normal
+I (33481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (33481) SEND_LOG: send success!
+I (33581) SEND_LOG: status: normal
+I (33581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (33681) SEND_LOG: status: normal
+I (33681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (33781) SEND_LOG: status: normal
+I (33781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (33781) SEND_LOG: send success!
+I (33881) SEND_LOG: status: normal
+I (33881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (33981) SEND_LOG: status: normal
+I (33981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (34081) SEND_LOG: status: normal
+I (34081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (34081) SEND_LOG: send success!
+I (34181) SEND_LOG: status: normal
+I (34181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (34281) SEND_LOG: status: normal
+I (34281) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (34381) SEND_LOG: status: normal
+I (34381) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (34381) SEND_LOG: send success!
+I (34481) SEND_LOG: status: normal
+I (34481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (34581) SEND_LOG: status: normal
+I (34581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (34681) SEND_LOG: status: normal
+I (34681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (34681) SEND_LOG: send success!
+I (34781) SEND_LOG: status: normal
+I (34781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (34881) SEND_LOG: status: normal
+I (34881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (34981) SEND_LOG: status: normal
+I (34981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (34981) SEND_LOG: send success!
+I (35081) SEND_LOG: status: normal
+I (35081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (35181) SEND_LOG: status: normal
+I (35181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (35281) SEND_LOG: status: normal
+I (35281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (35281) SEND_LOG: send success!
+I (35381) SEND_LOG: status: normal
+I (35381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (35481) SEND_LOG: status: normal
+I (35481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (35581) SEND_LOG: status: normal
+I (35581) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (35581) SEND_LOG: send success!
+I (35681) SEND_LOG: status: normal
+I (35681) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (35781) SEND_LOG: status: normal
+I (35781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (35881) SEND_LOG: status: normal
+I (35881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (35881) SEND_LOG: send success!
+I (35981) SEND_LOG: status: normal
+I (35981) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-77 dBm
+I (36081) SEND_LOG: status: normal
+I (36081) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-77 dBm
+I (36181) SEND_LOG: status: normal
+I (36181) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-77 dBm
+I (36181) SEND_LOG: send success!
+I (36281) SEND_LOG: status: normal
+I (36281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (36381) SEND_LOG: status: normal
+I (36381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (36481) SEND_LOG: status: normal
+I (36481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (36481) SEND_LOG: send success!
+I (36581) SEND_LOG: status: normal
+I (36581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (36681) SEND_LOG: status: normal
+I (36681) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (36781) SEND_LOG: status: normal
+I (36781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (36781) SEND_LOG: send success!
+I (36881) SEND_LOG: status: normal
+I (36881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (36981) SEND_LOG: status: normal
+I (36981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (37081) SEND_LOG: status: normal
+I (37081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (37081) SEND_LOG: send success!
+I (37181) SEND_LOG: status: normal
+I (37181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (37281) SEND_LOG: status: normal
+I (37281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (37381) SEND_LOG: status: normal
+I (37381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (37381) SEND_LOG: send success!
+I (37481) SEND_LOG: status: normal
+I (37481) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (37581) SEND_LOG: status: normal
+I (37581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (37681) SEND_LOG: status: normal
+I (37681) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (37681) SEND_LOG: send success!
+I (37781) SEND_LOG: status: normal
+I (37781) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (37881) SEND_LOG: status: normal
+I (37881) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (37981) SEND_LOG: status: normal
+I (37981) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (37981) SEND_LOG: send success!
+I (38081) SEND_LOG: status: normal
+I (38081) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (38181) SEND_LOG: status: normal
+I (38181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (38281) SEND_LOG: status: normal
+I (38281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (38281) SEND_LOG: send success!
+I (38381) SEND_LOG: status: normal
+I (38381) recv_LOG: RSSI val. remote(send->recv):78 dBm, local(recv->send):-77 dBm
+I (38481) SEND_LOG: status: normal
+I (38481) recv_LOG: RSSI val. remote(send->recv):78 dBm, local(recv->send):-77 dBm
+I (38581) SEND_LOG: status: normal
+I (38581) recv_LOG: RSSI val. remote(send->recv):78 dBm, local(recv->send):-77 dBm
+I (38581) SEND_LOG: send success!
+I (38681) SEND_LOG: status: normal
+I (38681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (38781) SEND_LOG: status: normal
+I (38781) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (38881) SEND_LOG: status: normal
+I (38881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (38881) SEND_LOG: send success!
+I (38981) SEND_LOG: status: normal
+I (38981) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (39081) SEND_LOG: status: normal
+I (39081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (39181) SEND_LOG: status: normal
+I (39181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (39181) SEND_LOG: send success!
+I (39281) SEND_LOG: status: normal
+I (39281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-66 dBm
+I (39381) SEND_LOG: status: normal
+I (39381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-66 dBm
+I (39481) SEND_LOG: status: normal
+I (39481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-66 dBm
+I (39481) SEND_LOG: send success!
+I (39581) SEND_LOG: status: normal
+I (39581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (39681) SEND_LOG: status: normal
+I (39681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (39781) SEND_LOG: status: normal
+I (39781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (39781) SEND_LOG: send success!
+I (39881) SEND_LOG: status: normal
+I (39881) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (39981) SEND_LOG: status: normal
+I (39981) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (40081) SEND_LOG: status: normal
+I (40081) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (40081) SEND_LOG: send success!
+I (40181) SEND_LOG: status: normal
+I (40181) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (40281) SEND_LOG: status: normal
+I (40281) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (40381) SEND_LOG: status: normal
+I (40381) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (40381) SEND_LOG: send success!
+I (40481) SEND_LOG: status: normal
+I (40481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (40581) SEND_LOG: status: normal
+I (40581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (40681) SEND_LOG: status: normal
+I (40681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (40681) SEND_LOG: send success!
+I (40781) SEND_LOG: status: normal
+I (40781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (40881) SEND_LOG: status: normal
+I (40881) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (40981) SEND_LOG: status: normal
+I (40981) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (40981) SEND_LOG: send success!
+I (41081) SEND_LOG: status: normal
+I (41081) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-59 dBm
+I (41181) SEND_LOG: status: normal
+I (41181) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-59 dBm
+I (41281) SEND_LOG: status: normal
+I (41281) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-59 dBm
+I (41281) SEND_LOG: send success!
+I (41381) SEND_LOG: status: normal
+I (41381) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (41481) SEND_LOG: status: normal
+I (41481) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (41581) SEND_LOG: status: normal
+I (41581) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (41581) SEND_LOG: send success!
+I (41681) SEND_LOG: status: normal
+I (41681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (41781) SEND_LOG: status: normal
+I (41781) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (41881) SEND_LOG: status: normal
+I (41881) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (41881) SEND_LOG: send success!
+I (41981) SEND_LOG: status: normal
+I (41981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (42081) SEND_LOG: status: normal
+I (42081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (42181) SEND_LOG: status: normal
+I (42181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-64 dBm
+I (42181) SEND_LOG: send success!
+I (42281) SEND_LOG: status: normal
+I (42281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (42381) SEND_LOG: status: normal
+I (42381) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (42481) SEND_LOG: status: normal
+I (42481) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (42481) SEND_LOG: send success!
+I (42581) SEND_LOG: status: normal
+I (42581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (42681) SEND_LOG: status: normal
+I (42681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (42781) SEND_LOG: status: normal
+I (42781) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (42781) SEND_LOG: send success!
+I (42881) SEND_LOG: status: normal
+I (42881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (42981) SEND_LOG: status: normal
+I (42981) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (43081) SEND_LOG: status: normal
+I (43081) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (43081) SEND_LOG: send success!
+I (43181) SEND_LOG: status: normal
+I (43181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (43281) SEND_LOG: status: normal
+I (43281) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (43381) SEND_LOG: status: normal
+I (43381) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (43381) SEND_LOG: send success!
+I (43481) SEND_LOG: status: normal
+I (43481) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (43581) SEND_LOG: status: normal
+I (43581) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (43681) SEND_LOG: status: normal
+I (43681) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (43681) SEND_LOG: send success!
+I (43781) SEND_LOG: status: normal
+I (43781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (43881) SEND_LOG: status: normal
+I (43881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (43981) SEND_LOG: status: normal
+I (43981) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (43981) SEND_LOG: send success!
+I (44081) SEND_LOG: status: normal
+I (44081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (44181) SEND_LOG: status: normal
+I (44181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (44281) SEND_LOG: status: normal
+I (44281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (44281) SEND_LOG: send success!
+I (44381) SEND_LOG: status: normal
+I (44381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (44481) SEND_LOG: status: normal
+I (44481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (44581) SEND_LOG: status: normal
+I (44581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (44581) SEND_LOG: send success!
+I (44681) SEND_LOG: status: normal
+I (44681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-60 dBm
+I (44781) SEND_LOG: status: normal
+I (44781) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-60 dBm
+I (44881) SEND_LOG: status: normal
+I (44881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-60 dBm
+I (44881) SEND_LOG: send success!
+I (44981) SEND_LOG: status: normal
+I (44981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-64 dBm
+I (45081) SEND_LOG: status: normal
+I (45081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-64 dBm
+I (45181) SEND_LOG: status: normal
+I (45181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-64 dBm
+I (45181) SEND_LOG: send success!
+I (45281) SEND_LOG: status: normal
+I (45281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (45381) SEND_LOG: status: normal
+I (45381) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (45481) SEND_LOG: status: normal
+I (45481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (45481) SEND_LOG: send success!
+I (45581) SEND_LOG: status: normal
+I (45581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (45681) SEND_LOG: status: normal
+I (45681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (45781) SEND_LOG: status: normal
+I (45781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (45781) SEND_LOG: send success!
+I (45881) SEND_LOG: status: normal
+I (45881) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-59 dBm
+I (45981) SEND_LOG: status: normal
+I (45981) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-59 dBm
+I (46081) SEND_LOG: status: normal
+I (46081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-59 dBm
+I (46081) SEND_LOG: send success!
+I (46181) SEND_LOG: status: normal
+I (46181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-62 dBm
+I (46281) SEND_LOG: status: normal
+I (46281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-62 dBm
+I (46381) SEND_LOG: status: normal
+I (46381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-62 dBm
+I (46381) SEND_LOG: send success!
+I (46481) SEND_LOG: status: normal
+I (46481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (46581) SEND_LOG: status: normal
+I (46581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (46681) SEND_LOG: status: normal
+I (46681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (46681) SEND_LOG: send success!
+I (46781) SEND_LOG: status: normal
+I (46781) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (46881) SEND_LOG: status: normal
+I (46881) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (46981) SEND_LOG: status: normal
+I (46981) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (46981) SEND_LOG: send success!
+I (47081) SEND_LOG: status: normal
+I (47081) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-78 dBm
+I (47181) SEND_LOG: status: normal
+I (47181) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-78 dBm
+I (47281) SEND_LOG: status: normal
+I (47281) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-78 dBm
+I (47281) SEND_LOG: send success!
+I (47381) SEND_LOG: status: normal
+I (47381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (47481) SEND_LOG: status: normal
+I (47481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (47581) SEND_LOG: status: normal
+I (47581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (47581) SEND_LOG: send success!
+I (47681) SEND_LOG: status: normal
+I (47681) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-69 dBm
+I (47781) SEND_LOG: status: normal
+I (47781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-69 dBm
+I (47881) SEND_LOG: status: normal
+I (47881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-69 dBm
+I (47881) SEND_LOG: send success!
+I (47981) SEND_LOG: status: normal
+I (47981) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-67 dBm
+I (48081) SEND_LOG: status: normal
+I (48081) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-67 dBm
+I (48181) SEND_LOG: status: normal
+I (48181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-67 dBm
+I (48181) SEND_LOG: send success!
+I (48281) SEND_LOG: status: normal
+I (48281) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (48381) SEND_LOG: status: normal
+I (48381) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (48481) SEND_LOG: status: normal
+I (48481) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (48481) SEND_LOG: send success!
+I (48581) SEND_LOG: status: normal
+I (48581) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (48681) SEND_LOG: status: normal
+I (48681) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (48781) SEND_LOG: status: normal
+I (48781) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (48781) SEND_LOG: send success!
+I (48881) SEND_LOG: status: normal
+I (48881) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-56 dBm
+I (48981) SEND_LOG: status: normal
+I (48981) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-56 dBm
+I (49081) SEND_LOG: status: normal
+I (49081) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-56 dBm
+I (49081) SEND_LOG: send success!
+I (49181) SEND_LOG: status: normal
+I (49181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-69 dBm
+I (49281) SEND_LOG: status: normal
+I (49281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-69 dBm
+I (49381) SEND_LOG: status: normal
+I (49381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-69 dBm
+I (49381) SEND_LOG: send success!
+I (49481) SEND_LOG: status: normal
+I (49481) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (49581) SEND_LOG: status: normal
+I (49581) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (49681) SEND_LOG: status: normal
+I (49681) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (49681) SEND_LOG: send success!
+I (49781) SEND_LOG: status: normal
+I (49781) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (49881) SEND_LOG: status: normal
+I (49881) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (49981) SEND_LOG: status: normal
+I (49981) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (49981) SEND_LOG: send success!
+I (50081) SEND_LOG: status: normal
+I (50081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (50181) SEND_LOG: status: normal
+I (50181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (50281) SEND_LOG: status: normal
+I (50281) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-61 dBm
+I (50281) SEND_LOG: send success!
+I (50381) SEND_LOG: status: normal
+I (50381) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-58 dBm
+I (50481) SEND_LOG: status: normal
+I (50481) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-58 dBm
+I (50581) SEND_LOG: status: normal
+I (50581) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-58 dBm
+I (50581) SEND_LOG: send success!
+I (50681) SEND_LOG: status: normal
+I (50681) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (50781) SEND_LOG: status: normal
+I (50781) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (50881) SEND_LOG: status: normal
+I (50881) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (50881) SEND_LOG: send success!
+I (50981) SEND_LOG: status: normal
+I (50981) recv_LOG: RSSI val. remote(send->recv):56 dBm, local(recv->send):-56 dBm
+I (51081) SEND_LOG: status: normal
+I (51081) recv_LOG: RSSI val. remote(send->recv):56 dBm, local(recv->send):-56 dBm
+I (51181) SEND_LOG: status: normal
+I (51181) recv_LOG: RSSI val. remote(send->recv):56 dBm, local(recv->send):-56 dBm
+I (51181) SEND_LOG: send success!
+I (51281) SEND_LOG: status: normal
+I (51281) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-58 dBm
+I (51381) SEND_LOG: status: normal
+I (51381) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-58 dBm
+I (51481) SEND_LOG: status: normal
+I (51481) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-58 dBm
+I (51481) SEND_LOG: send success!
+I (51581) SEND_LOG: status: normal
+I (51581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (51681) SEND_LOG: status: normal
+I (51681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (51781) SEND_LOG: status: normal
+I (51781) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
+I (51781) SEND_LOG: send success!
+I (51881) SEND_LOG: status: normal
+I (51881) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (51981) SEND_LOG: status: normal
+I (51981) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (52081) SEND_LOG: status: normal
+I (52081) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (52081) SEND_LOG: send success!
+I (52181) SEND_LOG: status: normal
+I (52181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (52281) SEND_LOG: status: normal
+I (52281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (52381) SEND_LOG: status: normal
+I (52381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-60 dBm
+I (52381) SEND_LOG: send success!
+I (52481) SEND_LOG: status: normal
+I (52481) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (52581) SEND_LOG: status: normal
+I (52581) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (52681) SEND_LOG: status: normal
+I (52681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (52681) SEND_LOG: send success!
+I (52781) SEND_LOG: status: normal
+I (52781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (52881) SEND_LOG: status: normal
+I (52881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (52981) SEND_LOG: status: normal
+I (52981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-62 dBm
+I (52981) SEND_LOG: send success!
+I (53081) SEND_LOG: status: normal
+I (53081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (53181) SEND_LOG: status: normal
+I (53181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (53281) SEND_LOG: status: normal
+I (53281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (53281) SEND_LOG: send success!
+I (53381) SEND_LOG: status: normal
+I (53381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (53481) SEND_LOG: status: normal
+I (53481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (53581) SEND_LOG: status: normal
+I (53581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (53581) SEND_LOG: send success!
+I (53681) SEND_LOG: status: normal
+I (53681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-64 dBm
+I (53781) SEND_LOG: status: normal
+I (53781) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-64 dBm
+I (53881) SEND_LOG: status: normal
+I (53881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-64 dBm
+I (53881) SEND_LOG: send success!
+I (53981) SEND_LOG: status: normal
+I (53981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (54081) SEND_LOG: status: normal
+I (54081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (54181) SEND_LOG: status: normal
+I (54181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-68 dBm
+I (54181) SEND_LOG: send success!
+I (54281) SEND_LOG: status: normal
+I (54281) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (54381) SEND_LOG: status: normal
+I (54381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (54481) SEND_LOG: status: normal
+I (54481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-69 dBm
+I (54481) SEND_LOG: send success!
+I (54581) SEND_LOG: status: normal
+I (54581) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-70 dBm
+I (54681) SEND_LOG: status: normal
+I (54681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-70 dBm
+I (54781) SEND_LOG: status: normal
+I (54781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-70 dBm
+I (54781) SEND_LOG: send success!
+I (54881) SEND_LOG: status: normal
+I (54881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (54981) SEND_LOG: status: normal
+I (54981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (55081) SEND_LOG: status: normal
+I (55081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (55081) SEND_LOG: send success!
+I (55181) SEND_LOG: status: normal
+I (55181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (55281) SEND_LOG: status: normal
+I (55281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (55381) SEND_LOG: status: normal
+I (55381) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (55381) SEND_LOG: send success!
+I (55481) SEND_LOG: status: normal
+I (55481) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (55581) SEND_LOG: status: normal
+I (55581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (55681) SEND_LOG: status: normal
+I (55681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (55681) SEND_LOG: send success!
+I (55781) SEND_LOG: status: normal
+I (55781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (55881) SEND_LOG: status: normal
+I (55881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (55981) SEND_LOG: status: normal
+I (55981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (55981) SEND_LOG: send success!
+I (56081) SEND_LOG: status: normal
+I (56081) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (56181) SEND_LOG: status: normal
+I (56181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (56281) SEND_LOG: status: normal
+I (56281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (56281) SEND_LOG: send success!
+I (56381) SEND_LOG: status: normal
+I (56381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (56481) SEND_LOG: status: normal
+I (56481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (56581) SEND_LOG: status: normal
+I (56581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (56581) SEND_LOG: send success!
+I (56681) SEND_LOG: status: normal
+I (56681) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-68 dBm
+I (56781) SEND_LOG: status: normal
+I (56781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-68 dBm
+I (56881) SEND_LOG: status: normal
+I (56881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-68 dBm
+I (56881) SEND_LOG: send success!
+I (56981) SEND_LOG: status: normal
+I (56981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57081) SEND_LOG: status: normal
+I (57081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57181) SEND_LOG: status: normal
+I (57181) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57181) SEND_LOG: send success!
+I (57281) SEND_LOG: status: normal
+I (57281) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (57381) SEND_LOG: status: normal
+I (57381) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (57481) SEND_LOG: status: normal
+I (57481) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (57481) SEND_LOG: send success!
+I (57581) SEND_LOG: status: normal
+I (57581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57681) SEND_LOG: status: normal
+I (57681) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57781) SEND_LOG: status: normal
+I (57781) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57781) SEND_LOG: send success!
+I (57881) SEND_LOG: status: normal
+I (57881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (57981) SEND_LOG: status: normal
+I (57981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (58081) SEND_LOG: status: normal
+I (58081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (58081) SEND_LOG: send success!
+I (58181) SEND_LOG: status: normal
+I (58181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (58281) SEND_LOG: status: normal
+I (58281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (58381) SEND_LOG: status: normal
+I (58381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (58381) SEND_LOG: send success!
+I (58481) SEND_LOG: status: normal
+I (58481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (58581) SEND_LOG: status: normal
+I (58581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (58681) SEND_LOG: status: normal
+I (58681) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (58681) SEND_LOG: send success!
+I (58781) SEND_LOG: status: normal
+I (58781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (58881) SEND_LOG: status: normal
+I (58881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (58981) SEND_LOG: status: normal
+I (58981) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-69 dBm
+I (58981) SEND_LOG: send success!
+I (59081) SEND_LOG: status: normal
+I (59081) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (59181) SEND_LOG: status: normal
+I (59181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (59281) SEND_LOG: status: normal
+I (59281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (59281) SEND_LOG: send success!
+I (59381) SEND_LOG: status: normal
+I (59381) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (59481) SEND_LOG: status: normal
+I (59481) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (59581) SEND_LOG: status: normal
+I (59581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (59581) SEND_LOG: send success!
+I (59681) SEND_LOG: status: normal
+I (59681) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (59781) SEND_LOG: status: normal
+I (59781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (59881) SEND_LOG: status: normal
+I (59881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (59881) SEND_LOG: send success!
+I (59981) SEND_LOG: status: normal
+I (59981) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (60081) SEND_LOG: status: normal
+I (60081) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (60181) SEND_LOG: status: normal
+I (60181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (60181) SEND_LOG: send success!
+I (60281) SEND_LOG: status: normal
+I (60281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-73 dBm
+I (60381) SEND_LOG: status: normal
+I (60381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-73 dBm
+I (60481) SEND_LOG: status: normal
+I (60481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-73 dBm
+I (60481) SEND_LOG: send success!
+I (60581) SEND_LOG: status: normal
+I (60581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (60681) SEND_LOG: status: normal
+I (60681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (60781) SEND_LOG: status: normal
+I (60781) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (60781) SEND_LOG: send success!
+I (60881) SEND_LOG: status: normal
+I (60881) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (60981) SEND_LOG: status: normal
+I (60981) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (61081) SEND_LOG: status: normal
+I (61081) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-72 dBm
+I (61081) SEND_LOG: send success!
+I (61181) SEND_LOG: status: normal
+I (61181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (61281) SEND_LOG: status: normal
+I (61281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (61381) SEND_LOG: status: normal
+I (61381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (61381) SEND_LOG: send success!
+I (61481) SEND_LOG: status: normal
+I (61481) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-75 dBm
+I (61581) SEND_LOG: status: normal
+I (61581) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-75 dBm
+I (61681) SEND_LOG: status: normal
+I (61681) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-75 dBm
+I (61681) SEND_LOG: send success!
+I (61781) SEND_LOG: status: normal
+I (61781) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-75 dBm
+I (61881) SEND_LOG: status: normal
+I (61881) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-75 dBm
+I (61981) SEND_LOG: status: normal
+I (61981) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-75 dBm
+I (61981) SEND_LOG: send success!
+I (62081) SEND_LOG: status: normal
+I (62081) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (62181) SEND_LOG: status: normal
+I (62181) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (62281) SEND_LOG: status: normal
+I (62281) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (62281) SEND_LOG: send success!
+I (62381) SEND_LOG: status: normal
+I (62381) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-74 dBm
+I (62481) SEND_LOG: status: normal
+I (62481) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-74 dBm
+I (62581) SEND_LOG: status: normal
+I (62581) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-74 dBm
+I (62581) SEND_LOG: send success!
+I (62681) SEND_LOG: status: normal
+I (62681) recv_LOG: RSSI val. remote(send->recv):79 dBm, local(recv->send):-79 dBm
+I (62781) SEND_LOG: status: normal
+I (62781) recv_LOG: RSSI val. remote(send->recv):79 dBm, local(recv->send):-79 dBm
+I (62881) SEND_LOG: status: normal
+I (62881) recv_LOG: RSSI val. remote(send->recv):79 dBm, local(recv->send):-79 dBm
+I (62881) SEND_LOG: send success!
+I (62981) SEND_LOG: status: normal
+I (62981) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (63081) SEND_LOG: status: normal
+I (63081) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (63181) SEND_LOG: status: normal
+I (63181) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (63181) SEND_LOG: send success!
+I (63281) SEND_LOG: status: normal
+I (63281) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (63381) SEND_LOG: status: normal
+I (63381) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (63481) SEND_LOG: status: normal
+I (63481) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (63481) SEND_LOG: send success!
+I (63581) SEND_LOG: status: normal
+I (63581) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-77 dBm
+I (63681) SEND_LOG: status: normal
+I (63681) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-77 dBm
+I (63781) SEND_LOG: status: normal
+I (63781) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-77 dBm
+I (63781) SEND_LOG: send success!
+I (63881) SEND_LOG: status: normal
+I (63881) recv_LOG: RSSI val. remote(send->recv):80 dBm, local(recv->send):-80 dBm
+I (63981) SEND_LOG: status: normal
+I (63981) recv_LOG: RSSI val. remote(send->recv):80 dBm, local(recv->send):-80 dBm
+I (64081) SEND_LOG: status: normal
+I (64081) recv_LOG: RSSI val. remote(send->recv):80 dBm, local(recv->send):-80 dBm
+I (64081) SEND_LOG: send success!
+I (64181) SEND_LOG: status: normal
+I (64181) recv_LOG: RSSI val. remote(send->recv):80 dBm, local(recv->send):-80 dBm
+I (64281) SEND_LOG: status: normal
+I (64281) recv_LOG: RSSI val. remote(send->recv):80 dBm, local(recv->send):-80 dBm
+I (64381) SEND_LOG: status: normal
+I (64381) recv_LOG: RSSI val. remote(send->recv):80 dBm, local(recv->send):-80 dBm
+I (64381) SEND_LOG: send success!
+I (64481) SEND_LOG: status: normal
+I (64481) recv_LOG: RSSI val. remote(send->recv):79 dBm, local(recv->send):-79 dBm
+I (64581) SEND_LOG: status: normal
+I (64581) recv_LOG: RSSI val. remote(send->recv):79 dBm, local(recv->send):-79 dBm
+I (64681) SEND_LOG: status: normal
+I (64681) recv_LOG: RSSI val. remote(send->recv):79 dBm, local(recv->send):-79 dBm
+I (64681) SEND_LOG: send success!
+I (64781) SEND_LOG: status: normal
+I (64781) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-79 dBm
+I (64881) SEND_LOG: status: normal
+I (64881) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-79 dBm
+I (64981) SEND_LOG: status: normal
+I (64981) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-79 dBm
+I (64981) SEND_LOG: send success!
+I (65081) SEND_LOG: status: normal
+I (65081) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-76 dBm
+I (65181) SEND_LOG: status: normal
+I (65181) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-76 dBm
+I (65281) SEND_LOG: status: normal
+I (65281) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-76 dBm
+I (65281) SEND_LOG: send success!
+I (65381) SEND_LOG: status: normal
+I (65381) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (65481) SEND_LOG: status: normal
+I (65481) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (65581) SEND_LOG: status: normal
+I (65581) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (65581) SEND_LOG: send success!
+I (65681) SEND_LOG: status: normal
+I (65681) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-75 dBm
+I (65781) SEND_LOG: status: normal
+I (65781) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-75 dBm
+I (65881) SEND_LOG: status: normal
+I (65881) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-75 dBm
+I (65881) SEND_LOG: send success!
+I (65981) SEND_LOG: status: normal
+I (65981) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-79 dBm
+I (66081) SEND_LOG: status: normal
+I (66081) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-79 dBm
+I (66181) SEND_LOG: status: normal
+I (66181) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-79 dBm
+I (66181) SEND_LOG: send success!
+I (66281) SEND_LOG: status: normal
+I (66281) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-74 dBm
+I (66381) SEND_LOG: status: normal
+I (66381) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-74 dBm
+I (66481) SEND_LOG: status: normal
+I (66481) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-74 dBm
+I (66481) SEND_LOG: send success!
+I (66581) SEND_LOG: status: normal
+I (66581) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (66681) SEND_LOG: status: normal
+I (66681) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (66781) SEND_LOG: status: normal
+I (66781) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (66781) SEND_LOG: send success!
+I (66881) SEND_LOG: status: normal
+I (66881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (66981) SEND_LOG: status: normal
+I (66981) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (67081) SEND_LOG: status: normal
+I (67081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (67081) SEND_LOG: send success!
+I (67181) SEND_LOG: status: normal
+I (67181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (67281) SEND_LOG: status: normal
+I (67281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (67381) SEND_LOG: status: normal
+I (67381) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (67381) SEND_LOG: send success!
+I (67481) SEND_LOG: status: normal
+I (67481) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-75 dBm
+I (67581) SEND_LOG: status: normal
+I (67581) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-75 dBm
+I (67681) SEND_LOG: status: normal
+I (67681) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-75 dBm
+I (67681) SEND_LOG: send success!
+I (67781) SEND_LOG: status: normal
+I (67781) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-77 dBm
+I (67881) SEND_LOG: status: normal
+I (67881) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-77 dBm
+I (67981) SEND_LOG: status: normal
+I (67981) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-77 dBm
+I (67981) SEND_LOG: send success!
+I (68081) SEND_LOG: status: normal
+I (68081) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-76 dBm
+I (68181) SEND_LOG: status: normal
+I (68181) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-76 dBm
+I (68281) SEND_LOG: status: normal
+I (68281) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-76 dBm
+I (68281) SEND_LOG: send success!
+I (68381) SEND_LOG: status: normal
+I (68381) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (68481) SEND_LOG: status: normal
+I (68481) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (68581) SEND_LOG: status: normal
+I (68581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (68581) SEND_LOG: send success!
+I (68681) SEND_LOG: status: normal
+I (68681) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (68781) SEND_LOG: status: normal
+I (68781) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (68881) SEND_LOG: status: normal
+I (68881) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (68881) SEND_LOG: send success!
+I (68981) SEND_LOG: status: normal
+I (68981) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (69081) SEND_LOG: status: normal
+I (69081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (69181) SEND_LOG: status: normal
+I (69181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (69181) SEND_LOG: send success!
+I (69281) SEND_LOG: status: normal
+I (69281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-71 dBm
+I (69381) SEND_LOG: status: normal
+I (69381) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-71 dBm
+I (69481) SEND_LOG: status: normal
+I (69481) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-71 dBm
+I (69481) SEND_LOG: send success!
+I (69581) SEND_LOG: status: normal
+I (69581) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-76 dBm
+I (69681) SEND_LOG: status: normal
+I (69681) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-76 dBm
+I (69781) SEND_LOG: status: normal
+I (69781) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-76 dBm
+I (69781) SEND_LOG: send success!
+I (69881) SEND_LOG: status: normal
+I (69881) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-76 dBm
+I (69981) SEND_LOG: status: normal
+I (69981) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-76 dBm
+I (70081) SEND_LOG: status: normal
+I (70081) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-76 dBm
+I (70081) SEND_LOG: send success!
+I (70181) SEND_LOG: status: normal
+I (70181) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (70281) SEND_LOG: status: normal
+I (70281) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (70381) SEND_LOG: status: normal
+I (70381) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (70381) SEND_LOG: send success!
+I (70481) SEND_LOG: status: normal
+I (70481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (70581) SEND_LOG: status: normal
+I (70581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (70681) SEND_LOG: status: normal
+I (70681) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (70681) SEND_LOG: send success!
+I (70781) SEND_LOG: status: normal
+I (70781) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (70881) SEND_LOG: status: normal
+I (70881) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (70981) SEND_LOG: status: normal
+I (70981) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (70981) SEND_LOG: send success!
+I (71081) SEND_LOG: status: normal
+I (71081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (71181) SEND_LOG: status: normal
+I (71181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (71281) SEND_LOG: status: normal
+I (71281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (71281) SEND_LOG: send success!
+I (71381) SEND_LOG: status: normal
+I (71381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (71481) SEND_LOG: status: normal
+I (71481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (71581) SEND_LOG: status: normal
+I (71581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (71581) SEND_LOG: send success!
+I (71681) SEND_LOG: status: normal
+I (71681) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (71781) SEND_LOG: status: normal
+I (71781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (71881) SEND_LOG: status: normal
+I (71881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (71881) SEND_LOG: send success!
+I (71981) SEND_LOG: status: normal
+I (71981) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (72081) SEND_LOG: status: normal
+I (72081) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (72181) SEND_LOG: status: normal
+I (72181) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (72181) SEND_LOG: send success!
+I (72281) SEND_LOG: status: normal
+I (72281) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (72381) SEND_LOG: status: normal
+I (72381) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (72481) SEND_LOG: status: normal
+I (72481) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-74 dBm
+I (72481) SEND_LOG: send success!
+I (72581) SEND_LOG: status: normal
+I (72581) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (72681) SEND_LOG: status: normal
+I (72681) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (72781) SEND_LOG: status: normal
+I (72781) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-76 dBm
+I (72781) SEND_LOG: send success!
+I (72881) SEND_LOG: status: normal
+I (72881) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (72981) SEND_LOG: status: normal
+I (72981) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (73081) SEND_LOG: status: normal
+I (73081) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-72 dBm
+I (73081) SEND_LOG: send success!
+I (73181) SEND_LOG: status: normal
+I (73181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (73281) SEND_LOG: status: normal
+I (73281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (73381) SEND_LOG: status: normal
+I (73381) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (73381) SEND_LOG: send success!
+I (73481) SEND_LOG: status: normal
+I (73481) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (73581) SEND_LOG: status: normal
+I (73581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (73681) SEND_LOG: status: normal
+I (73681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (73681) SEND_LOG: send success!
+I (73781) SEND_LOG: status: normal
+I (73781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (73881) SEND_LOG: status: normal
+I (73881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (73981) SEND_LOG: status: normal
+I (73981) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (73981) SEND_LOG: send success!
+I (74081) SEND_LOG: status: normal
+I (74081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (74181) SEND_LOG: status: normal
+I (74181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (74281) SEND_LOG: status: normal
+I (74281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (74281) SEND_LOG: send success!
+I (74381) SEND_LOG: status: normal
+I (74381) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (74481) SEND_LOG: status: normal
+I (74481) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (74581) SEND_LOG: status: normal
+I (74581) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (74581) SEND_LOG: send success!
+I (74681) SEND_LOG: status: normal
+I (74681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-73 dBm
+I (74781) SEND_LOG: status: normal
+I (74781) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-73 dBm
+I (74881) SEND_LOG: status: normal
+I (74881) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-73 dBm
+I (74881) SEND_LOG: send success!
+I (74981) SEND_LOG: status: normal
+I (74981) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (75081) SEND_LOG: status: normal
+I (75081) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (75181) SEND_LOG: status: normal
+I (75181) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (75181) SEND_LOG: send success!
+I (75281) SEND_LOG: status: normal
+I (75281) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (75381) SEND_LOG: status: normal
+I (75381) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (75481) SEND_LOG: status: normal
+I (75481) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (75481) SEND_LOG: send success!
+I (75581) SEND_LOG: status: normal
+I (75581) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (75681) SEND_LOG: status: normal
+I (75681) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (75781) SEND_LOG: status: normal
+I (75781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (75781) SEND_LOG: send success!
+I (75881) SEND_LOG: status: normal
+I (75881) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (75981) SEND_LOG: status: normal
+I (75981) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (76081) SEND_LOG: status: normal
+I (76081) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (76081) SEND_LOG: send success!
+I (76181) SEND_LOG: status: normal
+I (76181) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-74 dBm
+I (76281) SEND_LOG: status: normal
+I (76281) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-74 dBm
+I (76381) SEND_LOG: status: normal
+I (76381) recv_LOG: RSSI val. remote(send->recv):75 dBm, local(recv->send):-74 dBm
+I (76381) SEND_LOG: send success!
+I (76481) SEND_LOG: status: normal
+I (76481) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (76581) SEND_LOG: status: normal
+I (76581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (76681) SEND_LOG: status: normal
+I (76681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-71 dBm
+I (76681) SEND_LOG: send success!
+I (76781) SEND_LOG: status: normal
+I (76781) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (76881) SEND_LOG: status: normal
+I (76881) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (76981) SEND_LOG: status: normal
+I (76981) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (76981) SEND_LOG: send success!
+I (77081) SEND_LOG: status: normal
+I (77081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-71 dBm
+I (77181) SEND_LOG: status: normal
+I (77181) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-71 dBm
+I (77281) SEND_LOG: status: normal
+I (77281) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-71 dBm
+I (77281) SEND_LOG: send success!
+I (77381) SEND_LOG: status: normal
+I (77381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (77481) SEND_LOG: status: normal
+I (77481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (77581) SEND_LOG: status: normal
+I (77581) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (77581) SEND_LOG: send success!
+I (77681) SEND_LOG: status: normal
+I (77681) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (77781) SEND_LOG: status: normal
+I (77781) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (77881) SEND_LOG: status: normal
+I (77881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (77881) SEND_LOG: send success!
+I (77981) SEND_LOG: status: normal
+I (77981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (78081) SEND_LOG: status: normal
+I (78081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (78181) SEND_LOG: status: normal
+I (78181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (78181) SEND_LOG: send success!
+I (78281) SEND_LOG: status: normal
+I (78281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (78381) SEND_LOG: status: normal
+I (78381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (78481) SEND_LOG: status: normal
+I (78481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (78481) SEND_LOG: send success!
+I (78581) SEND_LOG: status: normal
+I (78581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-72 dBm
+I (78681) SEND_LOG: status: normal
+I (78681) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-72 dBm
+I (78781) SEND_LOG: status: normal
+I (78781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-72 dBm
+I (78781) SEND_LOG: send success!
+I (78881) SEND_LOG: status: normal
+I (78881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (78981) SEND_LOG: status: normal
+I (78981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (79081) SEND_LOG: status: normal
+I (79081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (79081) SEND_LOG: send success!
+I (79181) SEND_LOG: status: normal
+I (79181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (79281) SEND_LOG: status: normal
+I (79281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (79381) SEND_LOG: status: normal
+I (79381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (79381) SEND_LOG: send success!
+I (79481) SEND_LOG: status: normal
+I (79481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (79581) SEND_LOG: status: normal
+I (79581) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (79681) SEND_LOG: status: normal
+I (79681) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (79681) SEND_LOG: send success!
+I (79781) SEND_LOG: status: normal
+I (79781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (79881) SEND_LOG: status: normal
+I (79881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (79981) SEND_LOG: status: normal
+I (79981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (79981) SEND_LOG: send success!
+I (80081) SEND_LOG: status: normal
+I (80081) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (80181) SEND_LOG: status: normal
+I (80181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (80281) SEND_LOG: status: normal
+I (80281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (80281) SEND_LOG: send success!
+I (80381) SEND_LOG: status: normal
+I (80381) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (80481) SEND_LOG: status: normal
+I (80481) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (80581) SEND_LOG: status: normal
+I (80581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (80581) SEND_LOG: send success!
+I (80681) SEND_LOG: status: normal
+I (80681) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (80781) SEND_LOG: status: normal
+I (80781) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (80881) SEND_LOG: status: normal
+I (80881) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (80881) SEND_LOG: send success!
+I (80981) SEND_LOG: status: normal
+I (80981) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (81081) SEND_LOG: status: normal
+I (81081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (81181) SEND_LOG: status: normal
+I (81181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (81181) SEND_LOG: send success!
+I (81281) SEND_LOG: status: normal
+I (81281) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (81381) SEND_LOG: status: normal
+I (81381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (81481) SEND_LOG: status: normal
+I (81481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (81481) SEND_LOG: send success!
+I (81581) SEND_LOG: status: normal
+I (81581) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (81681) SEND_LOG: status: normal
+I (81681) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (81781) SEND_LOG: status: normal
+I (81781) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (81781) SEND_LOG: send success!
+I (81881) SEND_LOG: status: normal
+I (81881) recv_LOG: RSSI val. remote(send->recv):84 dBm, local(recv->send):-82 dBm
+I (81981) SEND_LOG: status: normal
+I (81981) recv_LOG: RSSI val. remote(send->recv):84 dBm, local(recv->send):-82 dBm
+I (82081) SEND_LOG: status: normal
+I (82081) recv_LOG: RSSI val. remote(send->recv):84 dBm, local(recv->send):-82 dBm
+I (82081) SEND_LOG: send success!
+I (82181) SEND_LOG: status: normal
+I (82181) recv_LOG: RSSI val. remote(send->recv):84 dBm, local(recv->send):-84 dBm
+I (82281) SEND_LOG: status: normal
+I (82281) recv_LOG: RSSI val. remote(send->recv):84 dBm, local(recv->send):-84 dBm
+I (82381) SEND_LOG: status: normal
+I (82381) recv_LOG: RSSI val. remote(send->recv):84 dBm, local(recv->send):-84 dBm
+I (82381) SEND_LOG: send success!
+I (82481) SEND_LOG: status: normal
+I (82481) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-80 dBm
+I (82581) SEND_LOG: status: normal
+I (82581) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-80 dBm
+I (82681) SEND_LOG: status: normal
+I (82681) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-80 dBm
+I (82681) SEND_LOG: send success!
+I (82781) SEND_LOG: status: normal
+I (82781) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-78 dBm
+I (82881) SEND_LOG: status: normal
+I (82881) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-78 dBm
+I (82981) SEND_LOG: status: normal
+I (82981) recv_LOG: RSSI val. remote(send->recv):81 dBm, local(recv->send):-78 dBm
+I (82981) SEND_LOG: send success!
+I (83081) SEND_LOG: status: normal
+I (83081) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (83181) SEND_LOG: status: normal
+I (83181) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (83281) SEND_LOG: status: normal
+I (83281) recv_LOG: RSSI val. remote(send->recv):73 dBm, local(recv->send):-73 dBm
+I (83281) SEND_LOG: send success!
+I (83381) SEND_LOG: status: normal
+I (83381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-72 dBm
+I (83481) SEND_LOG: status: normal
+I (83481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-72 dBm
+I (83581) SEND_LOG: status: normal
+I (83581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-72 dBm
+I (83581) SEND_LOG: send success!
+I (83681) SEND_LOG: status: normal
+I (83681) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (83781) SEND_LOG: status: normal
+I (83781) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (83881) SEND_LOG: status: normal
+I (83881) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (83881) SEND_LOG: send success!
+I (83981) SEND_LOG: status: normal
+I (83981) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-75 dBm
+I (84081) SEND_LOG: status: normal
+I (84081) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-75 dBm
+I (84181) SEND_LOG: status: normal
+I (84181) recv_LOG: RSSI val. remote(send->recv):74 dBm, local(recv->send):-75 dBm
+I (84181) SEND_LOG: send success!
+I (84281) SEND_LOG: status: normal
+I (84281) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-77 dBm
+I (84381) SEND_LOG: status: normal
+I (84381) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-77 dBm
+I (84481) SEND_LOG: status: normal
+I (84481) recv_LOG: RSSI val. remote(send->recv):76 dBm, local(recv->send):-77 dBm
+I (84481) SEND_LOG: send success!
+I (84581) SEND_LOG: status: normal
+I (84581) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-69 dBm
+I (84681) SEND_LOG: status: normal
+I (84681) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-69 dBm
+I (84781) SEND_LOG: status: normal
+I (84781) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-69 dBm
+I (84781) SEND_LOG: send success!
+I (84881) SEND_LOG: status: normal
+I (84881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (84981) SEND_LOG: status: normal
+I (84981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (85081) SEND_LOG: status: normal
+I (85081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (85081) SEND_LOG: send success!
+I (85181) SEND_LOG: status: normal
+I (85181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (85281) SEND_LOG: status: normal
+I (85281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (85381) SEND_LOG: status: normal
+I (85381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (85381) SEND_LOG: send success!
+I (85481) SEND_LOG: status: normal
+I (85481) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (85581) SEND_LOG: status: normal
+I (85581) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (85681) SEND_LOG: status: normal
+I (85681) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (85681) SEND_LOG: send success!
+I (85781) SEND_LOG: status: normal
+I (85781) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-58 dBm
+I (85881) SEND_LOG: status: normal
+I (85881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-58 dBm
+I (85981) SEND_LOG: status: normal
+I (85981) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-58 dBm
+I (85981) SEND_LOG: send success!
+I (86081) SEND_LOG: status: normal
+I (86081) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (86181) SEND_LOG: status: normal
+I (86181) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (86281) SEND_LOG: status: normal
+I (86281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (86281) SEND_LOG: send success!
+I (86381) SEND_LOG: status: normal
+I (86381) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (86481) SEND_LOG: status: normal
+I (86481) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (86581) SEND_LOG: status: normal
+I (86581) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-57 dBm
+I (86581) SEND_LOG: send success!
+I (86681) SEND_LOG: status: normal
+I (86681) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (86781) SEND_LOG: status: normal
+I (86781) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (86881) SEND_LOG: status: normal
+I (86881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (86881) SEND_LOG: send success!
+I (86981) SEND_LOG: status: normal
+I (86981) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (87081) SEND_LOG: status: normal
+I (87081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (87181) SEND_LOG: status: normal
+I (87181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-61 dBm
+I (87181) SEND_LOG: send success!
+I (87281) SEND_LOG: status: normal
+I (87281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (87381) SEND_LOG: status: normal
+I (87381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (87481) SEND_LOG: status: normal
+I (87481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-62 dBm
+I (87481) SEND_LOG: send success!
+I (87581) SEND_LOG: status: normal
+I (87581) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (87681) SEND_LOG: status: normal
+I (87681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (87781) SEND_LOG: status: normal
+I (87781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (87781) SEND_LOG: send success!
+I (87881) SEND_LOG: status: normal
+I (87881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (87981) SEND_LOG: status: normal
+I (87981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (88081) SEND_LOG: status: normal
+I (88081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (88081) SEND_LOG: send success!
+I (88181) SEND_LOG: status: normal
+I (88181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (88281) SEND_LOG: status: normal
+I (88281) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (88381) SEND_LOG: status: normal
+I (88381) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (88381) SEND_LOG: send success!
+I (88481) SEND_LOG: status: normal
+I (88481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (88581) SEND_LOG: status: normal
+I (88581) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (88681) SEND_LOG: status: normal
+I (88681) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (88681) SEND_LOG: send success!
+I (88781) SEND_LOG: status: normal
+I (88781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (88881) SEND_LOG: status: normal
+I (88881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (88981) SEND_LOG: status: normal
+I (88981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-66 dBm
+I (88981) SEND_LOG: send success!
+I (89081) SEND_LOG: status: normal
+I (89081) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-59 dBm
+I (89181) SEND_LOG: status: normal
+I (89181) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-59 dBm
+I (89281) SEND_LOG: status: normal
+I (89281) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-59 dBm
+I (89281) SEND_LOG: send success!
+I (89381) SEND_LOG: status: normal
+I (89381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (89481) SEND_LOG: status: normal
+I (89481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (89581) SEND_LOG: status: normal
+I (89581) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (89581) SEND_LOG: send success!
+I (89681) SEND_LOG: status: normal
+I (89681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (89781) SEND_LOG: status: normal
+I (89781) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (89881) SEND_LOG: status: normal
+I (89881) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (89881) SEND_LOG: send success!
+I (89981) SEND_LOG: status: normal
+I (89981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (90081) SEND_LOG: status: normal
+I (90081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (90181) SEND_LOG: status: normal
+I (90181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (90181) SEND_LOG: send success!
+I (90281) SEND_LOG: status: normal
+I (90281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (90381) SEND_LOG: status: normal
+I (90381) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (90481) SEND_LOG: status: normal
+I (90481) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-61 dBm
+I (90481) SEND_LOG: send success!
+I (90581) SEND_LOG: status: normal
+I (90581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (90681) SEND_LOG: status: normal
+I (90681) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (90781) SEND_LOG: status: normal
+I (90781) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-70 dBm
+I (90781) SEND_LOG: send success!
+I (90881) SEND_LOG: status: normal
+I (90881) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (90981) SEND_LOG: status: normal
+I (90981) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (91081) SEND_LOG: status: normal
+I (91081) recv_LOG: RSSI val. remote(send->recv):69 dBm, local(recv->send):-70 dBm
+I (91081) SEND_LOG: send success!
+I (91181) SEND_LOG: status: normal
+I (91181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (91281) SEND_LOG: status: normal
+I (91281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (91381) SEND_LOG: status: normal
+I (91381) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (91381) SEND_LOG: send success!
+I (91481) SEND_LOG: status: normal
+I (91481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (91581) SEND_LOG: status: normal
+I (91581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (91681) SEND_LOG: status: normal
+I (91681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (91681) SEND_LOG: send success!
+I (91781) SEND_LOG: status: normal
+I (91781) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (91881) SEND_LOG: status: normal
+I (91881) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (91981) SEND_LOG: status: normal
+I (91981) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (91981) SEND_LOG: send success!
+I (92081) SEND_LOG: status: normal
+I (92081) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-72 dBm
+I (92181) SEND_LOG: status: normal
+I (92181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-72 dBm
+I (92281) SEND_LOG: status: normal
+I (92281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-72 dBm
+I (92281) SEND_LOG: send success!
+I (92381) SEND_LOG: status: normal
+I (92381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (92481) SEND_LOG: status: normal
+I (92481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (92581) SEND_LOG: status: normal
+I (92581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (92581) SEND_LOG: send success!
+I (92681) SEND_LOG: status: normal
+I (92681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (92781) SEND_LOG: status: normal
+I (92781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (92881) SEND_LOG: status: normal
+I (92881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (92881) SEND_LOG: send success!
+I (92981) SEND_LOG: status: normal
+I (92981) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (93081) SEND_LOG: status: normal
+I (93081) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (93181) SEND_LOG: status: normal
+I (93181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (93181) SEND_LOG: send success!
+I (93281) SEND_LOG: status: normal
+I (93281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (93381) SEND_LOG: status: normal
+I (93381) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (93481) SEND_LOG: status: normal
+I (93481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (93481) SEND_LOG: send success!
+I (93581) SEND_LOG: status: normal
+I (93581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (93681) SEND_LOG: status: normal
+I (93681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (93781) SEND_LOG: status: normal
+I (93781) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (93781) SEND_LOG: send success!
+I (93881) SEND_LOG: status: normal
+I (93881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (93981) SEND_LOG: status: normal
+I (93981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (94081) SEND_LOG: status: normal
+I (94081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (94081) SEND_LOG: send success!
+I (94181) SEND_LOG: status: normal
+I (94181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (94281) SEND_LOG: status: normal
+I (94281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (94381) SEND_LOG: status: normal
+I (94381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (94381) SEND_LOG: send success!
+I (94481) SEND_LOG: status: normal
+I (94481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (94581) SEND_LOG: status: normal
+I (94581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (94681) SEND_LOG: status: normal
+I (94681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (94681) SEND_LOG: send success!
+I (94781) SEND_LOG: status: normal
+I (94781) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (94881) SEND_LOG: status: normal
+I (94881) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (94981) SEND_LOG: status: normal
+I (94981) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (94981) SEND_LOG: send success!
+I (95081) SEND_LOG: status: normal
+I (95081) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (95181) SEND_LOG: status: normal
+I (95181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (95281) SEND_LOG: status: normal
+I (95281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (95281) SEND_LOG: send success!
+I (95381) SEND_LOG: status: normal
+I (95381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (95481) SEND_LOG: status: normal
+I (95481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (95581) SEND_LOG: status: normal
+I (95581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (95581) SEND_LOG: send success!
+I (95681) SEND_LOG: status: normal
+I (95681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (95781) SEND_LOG: status: normal
+I (95781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (95881) SEND_LOG: status: normal
+I (95881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (95881) SEND_LOG: send success!
+I (95981) SEND_LOG: status: normal
+I (95981) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (96081) SEND_LOG: status: normal
+I (96081) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (96181) SEND_LOG: status: normal
+I (96181) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (96181) SEND_LOG: send success!
+I (96281) SEND_LOG: status: normal
+I (96281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (96381) SEND_LOG: status: normal
+I (96381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (96481) SEND_LOG: status: normal
+I (96481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-65 dBm
+I (96481) SEND_LOG: send success!
+I (96581) SEND_LOG: status: normal
+I (96581) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (96681) SEND_LOG: status: normal
+I (96681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (96781) SEND_LOG: status: normal
+I (96781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (96781) SEND_LOG: send success!
+I (96881) SEND_LOG: status: normal
+I (96881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (96981) SEND_LOG: status: normal
+I (96981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (97081) SEND_LOG: status: normal
+I (97081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (97081) SEND_LOG: send success!
+I (97181) SEND_LOG: status: normal
+I (97181) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (97281) SEND_LOG: status: normal
+I (97281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (97381) SEND_LOG: status: normal
+I (97381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (97381) SEND_LOG: send success!
+I (97481) SEND_LOG: status: normal
+I (97481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (97581) SEND_LOG: status: normal
+I (97581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (97681) SEND_LOG: status: normal
+I (97681) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (97681) SEND_LOG: send success!
+I (97781) SEND_LOG: status: normal
+I (97781) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (97881) SEND_LOG: status: normal
+I (97881) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (97981) SEND_LOG: status: normal
+I (97981) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (97981) SEND_LOG: send success!
+I (98081) SEND_LOG: status: normal
+I (98081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (98181) SEND_LOG: status: normal
+I (98181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (98281) SEND_LOG: status: normal
+I (98281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (98281) SEND_LOG: send success!
+I (98381) SEND_LOG: status: normal
+I (98381) recv_LOG: RSSI val. remote(send->recv):86 dBm, local(recv->send):-85 dBm
+I (98481) SEND_LOG: status: normal
+I (98481) recv_LOG: RSSI val. remote(send->recv):86 dBm, local(recv->send):-85 dBm
+I (98581) SEND_LOG: status: normal
+I (98581) recv_LOG: RSSI val. remote(send->recv):86 dBm, local(recv->send):-85 dBm
+I (98581) SEND_LOG: send success!
+I (98681) SEND_LOG: status: normal
+I (98681) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-77 dBm
+I (98781) SEND_LOG: status: normal
+I (98781) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-77 dBm
+I (98881) SEND_LOG: status: normal
+I (98881) recv_LOG: RSSI val. remote(send->recv):77 dBm, local(recv->send):-77 dBm
+I (98881) SEND_LOG: send success!
+I (98981) SEND_LOG: status: normal
+I (98981) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-70 dBm
+I (99081) SEND_LOG: status: normal
+I (99081) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-70 dBm
+I (99181) SEND_LOG: status: normal
+I (99181) recv_LOG: RSSI val. remote(send->recv):71 dBm, local(recv->send):-70 dBm
+I (99181) SEND_LOG: send success!
+I (99281) SEND_LOG: status: normal
+I (99281) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (99381) SEND_LOG: status: normal
+I (99381) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (99481) SEND_LOG: status: normal
+I (99481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-67 dBm
+I (99481) SEND_LOG: send success!
+I (99581) SEND_LOG: status: normal
+I (99581) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (99681) SEND_LOG: status: normal
+I (99681) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (99781) SEND_LOG: status: normal
+I (99781) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-67 dBm
+I (99781) SEND_LOG: send success!
+I (99881) SEND_LOG: status: normal
+I (99881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (99981) SEND_LOG: status: normal
+I (99981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (100081) SEND_LOG: status: normal
+I (100081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (100081) SEND_LOG: send success!
+I (100181) SEND_LOG: status: normal
+I (100181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (100281) SEND_LOG: status: normal
+I (100281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (100381) SEND_LOG: status: normal
+I (100381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (100381) SEND_LOG: send success!
+I (100481) SEND_LOG: status: normal
+I (100481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (100581) SEND_LOG: status: normal
+I (100581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (100681) SEND_LOG: status: normal
+I (100681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (100681) SEND_LOG: send success!
+I (100781) SEND_LOG: status: normal
+I (100781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (100881) SEND_LOG: status: normal
+I (100881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (100981) SEND_LOG: status: normal
+I (100981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-63 dBm
+I (100981) SEND_LOG: send success!
+I (101081) SEND_LOG: status: normal
+I (101081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (101181) SEND_LOG: status: normal
+I (101181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (101281) SEND_LOG: status: normal
+I (101281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (101281) SEND_LOG: send success!
+I (101381) SEND_LOG: status: normal
+I (101381) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (101481) SEND_LOG: status: normal
+I (101481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (101581) SEND_LOG: status: normal
+I (101581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (101581) SEND_LOG: send success!
+I (101681) SEND_LOG: status: normal
+I (101681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (101781) SEND_LOG: status: normal
+I (101781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (101881) SEND_LOG: status: normal
+I (101881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (101881) SEND_LOG: send success!
+I (101981) SEND_LOG: status: normal
+I (101981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (102081) SEND_LOG: status: normal
+I (102081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (102181) SEND_LOG: status: normal
+I (102181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (102181) SEND_LOG: send success!
+I (102281) SEND_LOG: status: normal
+I (102281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (102381) SEND_LOG: status: normal
+I (102381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (102481) SEND_LOG: status: normal
+I (102481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-65 dBm
+I (102481) SEND_LOG: send success!
+I (102581) SEND_LOG: status: normal
+I (102581) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (102681) SEND_LOG: status: normal
+I (102681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (102781) SEND_LOG: status: normal
+I (102781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-63 dBm
+I (102781) SEND_LOG: send success!
+I (102881) SEND_LOG: status: normal
+I (102881) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (102981) SEND_LOG: status: normal
+I (102981) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (103081) SEND_LOG: status: normal
+I (103081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-64 dBm
+I (103081) SEND_LOG: send success!
+I (103181) SEND_LOG: status: normal
+I (103181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (103281) SEND_LOG: status: normal
+I (103281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (103381) SEND_LOG: status: normal
+I (103381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (103381) SEND_LOG: send success!
+I (103481) SEND_LOG: status: normal
+I (103481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (103581) SEND_LOG: status: normal
+I (103581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (103681) SEND_LOG: status: normal
+I (103681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (103681) SEND_LOG: send success!
+I (103781) SEND_LOG: status: normal
+I (103781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (103881) SEND_LOG: status: normal
+I (103881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (103981) SEND_LOG: status: normal
+I (103981) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (103981) SEND_LOG: send success!
+I (104081) SEND_LOG: status: normal
+I (104081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (104181) SEND_LOG: status: normal
+I (104181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (104281) SEND_LOG: status: normal
+I (104281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (104281) SEND_LOG: send success!
+I (104381) SEND_LOG: status: normal
+I (104381) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (104481) SEND_LOG: status: normal
+I (104481) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (104581) SEND_LOG: status: normal
+I (104581) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (104581) SEND_LOG: send success!
+I (104681) SEND_LOG: status: normal
+I (104681) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (104781) SEND_LOG: status: normal
+I (104781) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (104881) SEND_LOG: status: normal
+I (104881) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (104881) SEND_LOG: send success!
+I (104981) SEND_LOG: status: normal
+I (104981) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (105081) SEND_LOG: status: normal
+I (105081) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (105181) SEND_LOG: status: normal
+I (105181) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-65 dBm
+I (105181) SEND_LOG: send success!
+I (105281) SEND_LOG: status: normal
+I (105281) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (105381) SEND_LOG: status: normal
+I (105381) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (105481) SEND_LOG: status: normal
+I (105481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-66 dBm
+I (105481) SEND_LOG: send success!
+I (105581) SEND_LOG: status: normal
+I (105581) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (105681) SEND_LOG: status: normal
+I (105681) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (105781) SEND_LOG: status: normal
+I (105781) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-66 dBm
+I (105781) SEND_LOG: send success!
+I (105881) SEND_LOG: status: normal
+I (105881) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-63 dBm
+I (105981) SEND_LOG: status: normal
+I (105981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-63 dBm
+I (106081) SEND_LOG: status: normal
+I (106081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-63 dBm
+I (106081) SEND_LOG: send success!
+I (106181) SEND_LOG: status: normal
+I (106181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (106281) SEND_LOG: status: normal
+I (106281) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (106381) SEND_LOG: status: normal
+I (106381) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (106381) SEND_LOG: send success!
+I (106481) SEND_LOG: status: normal
+I (106481) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-70 dBm
+I (106581) SEND_LOG: status: normal
+I (106581) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-70 dBm
+I (106681) SEND_LOG: status: normal
+I (106681) recv_LOG: RSSI val. remote(send->recv):67 dBm, local(recv->send):-70 dBm
+I (106681) SEND_LOG: send success!
+I (106781) SEND_LOG: status: normal
+I (106781) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (106881) SEND_LOG: status: normal
+I (106881) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (106981) SEND_LOG: status: normal
+I (106981) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-69 dBm
+I (106981) SEND_LOG: send success!
+I (107081) SEND_LOG: status: normal
+I (107081) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (107181) SEND_LOG: status: normal
+I (107181) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (107281) SEND_LOG: status: normal
+I (107281) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-70 dBm
+I (107281) SEND_LOG: send success!
+I (107381) SEND_LOG: status: normal
+I (107381) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (107481) SEND_LOG: status: normal
+I (107481) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (107581) SEND_LOG: status: normal
+I (107581) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-68 dBm
+I (107581) SEND_LOG: send success!
+I (107681) SEND_LOG: status: normal
+I (107681) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (107781) SEND_LOG: status: normal
+I (107781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (107881) SEND_LOG: status: normal
+I (107881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-73 dBm
+I (107881) SEND_LOG: send success!
+I (107981) SEND_LOG: status: normal
+I (107981) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (108081) SEND_LOG: status: normal
+I (108081) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (108181) SEND_LOG: status: normal
+I (108181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (108181) SEND_LOG: send success!
+I (108281) SEND_LOG: status: normal
+I (108281) recv_LOG: RSSI val. remote(send->recv):83 dBm, local(recv->send):-90 dBm
+I (108381) SEND_LOG: status: normal
+I (108381) recv_LOG: RSSI val. remote(send->recv):83 dBm, local(recv->send):-90 dBm
+I (108481) SEND_LOG: status: normal
+I (108481) recv_LOG: RSSI val. remote(send->recv):83 dBm, local(recv->send):-90 dBm
+I (108481) SEND_LOG: send success!
+I (108581) SEND_LOG: status: normal
+I (108581) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (108681) SEND_LOG: status: normal
+I (108681) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (108781) SEND_LOG: status: normal
+I (108781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-72 dBm
+I (108781) SEND_LOG: send success!
+I (108881) SEND_LOG: status: normal
+I (108881) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (108981) SEND_LOG: status: normal
+I (108981) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (109081) SEND_LOG: status: normal
+I (109081) recv_LOG: RSSI val. remote(send->recv):68 dBm, local(recv->send):-67 dBm
+I (109081) SEND_LOG: send success!
+I (109181) SEND_LOG: status: normal
+I (109181) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-76 dBm
+I (109281) SEND_LOG: status: normal
+I (109281) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-76 dBm
+I (109381) SEND_LOG: status: normal
+I (109381) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-76 dBm
+I (109381) SEND_LOG: send success!
+I (109481) SEND_LOG: status: normal
+I (109481) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-63 dBm
+I (109581) SEND_LOG: status: normal
+I (109581) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-63 dBm
+I (109681) SEND_LOG: status: normal
+I (109681) recv_LOG: RSSI val. remote(send->recv):66 dBm, local(recv->send):-63 dBm
+I (109681) SEND_LOG: send success!
+I (109781) SEND_LOG: status: normal
+I (109781) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (109881) SEND_LOG: status: normal
+I (109881) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (109981) SEND_LOG: status: normal
+I (109981) recv_LOG: RSSI val. remote(send->recv):72 dBm, local(recv->send):-74 dBm
+I (109981) SEND_LOG: send success!
+I (110081) SEND_LOG: status: normal
+I (110081) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (110181) SEND_LOG: status: normal
+I (110181) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (110281) SEND_LOG: status: normal
+I (110281) recv_LOG: RSSI val. remote(send->recv):64 dBm, local(recv->send):-64 dBm
+I (110281) SEND_LOG: send success!
+I (110381) SEND_LOG: status: normal
+I (110381) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (110481) SEND_LOG: status: normal
+I (110481) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (110581) SEND_LOG: status: normal
+I (110581) recv_LOG: RSSI val. remote(send->recv):70 dBm, local(recv->send):-71 dBm
+I (110581) SEND_LOG: send success!
+I (110681) SEND_LOG: status: normal
+I (110681) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (110781) SEND_LOG: status: normal
+I (110781) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (110881) SEND_LOG: status: normal
+I (110881) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (110881) SEND_LOG: send success!
+I (110981) SEND_LOG: status: normal
+I (110981) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (111081) SEND_LOG: status: normal
+I (111081) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (111181) SEND_LOG: status: normal
+I (111181) recv_LOG: RSSI val. remote(send->recv):63 dBm, local(recv->send):-61 dBm
+I (111181) SEND_LOG: send success!
+I (111281) SEND_LOG: status: normal
+I (111281) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (111381) SEND_LOG: status: normal
+I (111381) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (111481) SEND_LOG: status: normal
+I (111481) recv_LOG: RSSI val. remote(send->recv):65 dBm, local(recv->send):-63 dBm
+I (111481) SEND_LOG: send success!
+I (111581) SEND_LOG: status: normal
+I (111581) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-63 dBm
+I (111681) SEND_LOG: status: normal
+I (111681) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-63 dBm
+I (111781) SEND_LOG: status: normal
+I (111781) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-63 dBm
+I (111781) SEND_LOG: send success!
+I (111881) SEND_LOG: status: normal
+I (111881) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (111981) SEND_LOG: status: normal
+I (111981) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (112081) SEND_LOG: status: normal
+I (112081) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-59 dBm
+I (112081) SEND_LOG: send success!
+I (112181) SEND_LOG: status: normal
+I (112181) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-58 dBm
+I (112281) SEND_LOG: status: normal
+I (112281) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-58 dBm
+I (112381) SEND_LOG: status: normal
+I (112381) recv_LOG: RSSI val. remote(send->recv):60 dBm, local(recv->send):-58 dBm
+I (112381) SEND_LOG: send success!
+I (112481) SEND_LOG: status: normal
+I (112481) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (112581) SEND_LOG: status: normal
+I (112581) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (112681) SEND_LOG: status: normal
+I (112681) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-57 dBm
+I (112681) SEND_LOG: send success!
+I (112781) SEND_LOG: status: normal
+I (112781) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-55 dBm
+I (112881) SEND_LOG: status: normal
+I (112881) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-55 dBm
+I (112981) SEND_LOG: status: normal
+I (112981) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-55 dBm
+I (112981) SEND_LOG: send success!
+I (113081) SEND_LOG: status: normal
+I (113081) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (113181) SEND_LOG: status: normal
+I (113181) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (113281) SEND_LOG: status: normal
+I (113281) recv_LOG: RSSI val. remote(send->recv):58 dBm, local(recv->send):-56 dBm
+I (113281) SEND_LOG: send success!
+I (113381) SEND_LOG: status: normal
+I (113381) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-58 dBm
+I (113481) SEND_LOG: status: normal
+I (113481) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-58 dBm
+I (113581) SEND_LOG: status: normal
+I (113581) recv_LOG: RSSI val. remote(send->recv):57 dBm, local(recv->send):-58 dBm
+I (113581) SEND_LOG: send success!
+I (113681) SEND_LOG: status: normal
+I (113681) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (113781) SEND_LOG: status: normal
+I (113781) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (113881) SEND_LOG: status: normal
+I (113881) recv_LOG: RSSI val. remote(send->recv):59 dBm, local(recv->send):-59 dBm
+I (113881) SEND_LOG: send success!
+I (113981) SEND_LOG: status: normal
+I (113981) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (114081) SEND_LOG: status: normal
+I (114081) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (114181) SEND_LOG: status: normal
+I (114181) recv_LOG: RSSI val. remote(send->recv):62 dBm, local(recv->send):-62 dBm
+I (114181) SEND_LOG: send success!
+I (114281) SEND_LOG: status: normal
+I (114281) recv_LOG: RSSI val. remote(send->recv):61 dBm, local(recv->send):-60 dBm
